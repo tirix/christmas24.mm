@@ -1,0 +1,112 @@
+$theorem idemp
+
+* If every element is an idempotent and a certain "cyclic" identity holds, then the operation is commutative.
+
+h1::idemp.a             |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B )
+h2::idemp.b              |- ( ph -> A. a e. B ( a .o. a ) = a )
+h3::idemp.c             |- ( ph -> A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) )
+h4::idemp.d              |- ( ph -> X e. B )
+h5::idemp.e              |- ( ph -> Y e. B )
+6::id                   |- ( a = ( X .o. Y ) -> a = ( X .o. Y ) )
+7:6,6:oveq12d          |- ( a = ( X .o. Y ) -> ( a .o. a ) = ( ( X .o. Y ) .o. ( X .o. Y ) ) )
+8:7,6:eqeq12d         |- ( a = ( X .o. Y ) -> ( ( a .o. a ) = a <-> ( ( X .o. Y ) .o. ( X .o. Y ) ) = ( X .o. Y ) ) )
+9::oveq1                    |- ( a = X -> ( a .o. b ) = ( X .o. b ) )
+10:9:eleq1d              |- ( a = X -> ( ( a .o. b ) e. B <-> ( X .o. b ) e. B ) )
+11::oveq2                 |- ( b = Y -> ( X .o. b ) = ( X .o. Y ) )
+12:11:eleq1d             |- ( b = Y -> ( ( X .o. b ) e. B <-> ( X .o. Y ) e. B ) )
+13::eqidd                |- ( ( ph /\ a = X ) -> B = B )
+14:10,12,4,13,5:rspc2vd
+                        |- ( ph -> ( A. a e. B A. b e. B ( a .o. b ) e. B -> ( X .o. Y ) e. B ) )
+15:1,14:mpd            |- ( ph -> ( X .o. Y ) e. B )
+16:8,2,15:rspcdva    |- ( ph -> ( ( X .o. Y ) .o. ( X .o. Y ) ) = ( X .o. Y ) )
+17::oveq1                 |- ( a = ( X .o. Y ) -> ( a .o. b ) = ( ( X .o. Y ) .o. b ) )
+18:17:oveq1d             |- ( a = ( X .o. Y ) -> ( ( a .o. b ) .o. c ) = ( ( ( X .o. Y ) .o. b ) .o. c ) )
+19::oveq2                |- ( a = ( X .o. Y ) -> ( ( b .o. c ) .o. a ) = ( ( b .o. c ) .o. ( X .o. Y ) ) )
+20:18,19:eqeq12d        |- ( a = ( X .o. Y ) -> ( ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) <-> ( ( ( X .o. Y ) .o. b ) .o. c ) = ( ( b .o. c ) .o. ( X .o. Y ) ) ) )
+21::oveq2                 |- ( b = X -> ( ( X .o. Y ) .o. b ) = ( ( X .o. Y ) .o. X ) )
+22:21:oveq1d             |- ( b = X -> ( ( ( X .o. Y ) .o. b ) .o. c ) = ( ( ( X .o. Y ) .o. X ) .o. c ) )
+23::oveq1                   |- ( b = X -> ( b .o. c ) = ( X .o. c ) )
+24:23:oveq1d             |- ( b = X -> ( ( b .o. c ) .o. ( X .o. Y ) ) = ( ( X .o. c ) .o. ( X .o. Y ) ) )
+25:22,24:eqeq12d        |- ( b = X -> ( ( ( ( X .o. Y ) .o. b ) .o. c ) = ( ( b .o. c ) .o. ( X .o. Y ) ) <-> ( ( ( X .o. Y ) .o. X ) .o. c ) = ( ( X .o. c ) .o. ( X .o. Y ) ) ) )
+26::oveq2                |- ( c = Y -> ( ( ( X .o. Y ) .o. X ) .o. c ) = ( ( ( X .o. Y ) .o. X ) .o. Y ) )
+27::oveq2                   |- ( c = Y -> ( X .o. c ) = ( X .o. Y ) )
+28:27:oveq1d             |- ( c = Y -> ( ( X .o. c ) .o. ( X .o. Y ) ) = ( ( X .o. Y ) .o. ( X .o. Y ) ) )
+29:26,28:eqeq12d        |- ( c = Y -> ( ( ( ( X .o. Y ) .o. X ) .o. c ) = ( ( X .o. c ) .o. ( X .o. Y ) ) <-> ( ( ( X .o. Y ) .o. X ) .o. Y ) = ( ( X .o. Y ) .o. ( X .o. Y ) ) ) )
+30:20,25,29:rspc3v     |- ( ( ( X .o. Y ) e. B /\ X e. B /\ Y e. B ) -> ( A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) -> ( ( ( X .o. Y ) .o. X ) .o. Y ) = ( ( X .o. Y ) .o. ( X .o. Y ) ) ) )
+31:15,4,5,30:syl3anc
+                      |- ( ph -> ( A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) -> ( ( ( X .o. Y ) .o. X ) .o. Y ) = ( ( X .o. Y ) .o. ( X .o. Y ) ) ) )
+32:3,31:mpd          |- ( ph -> ( ( ( X .o. Y ) .o. X ) .o. Y ) = ( ( X .o. Y ) .o. ( X .o. Y ) ) )
+33:9:oveq1d                |- ( a = X -> ( ( a .o. b ) .o. c ) = ( ( X .o. b ) .o. c ) )
+34::oveq2                  |- ( a = X -> ( ( b .o. c ) .o. a ) = ( ( b .o. c ) .o. X ) )
+35:33,34:eqeq12d          |- ( a = X -> ( ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) <-> ( ( X .o. b ) .o. c ) = ( ( b .o. c ) .o. X ) ) )
+36::oveq2                   |- ( b = X -> ( X .o. b ) = ( X .o. X ) )
+37:36:oveq1d               |- ( b = X -> ( ( X .o. b ) .o. c ) = ( ( X .o. X ) .o. c ) )
+38:23:oveq1d               |- ( b = X -> ( ( b .o. c ) .o. X ) = ( ( X .o. c ) .o. X ) )
+39:37,38:eqeq12d          |- ( b = X -> ( ( ( X .o. b ) .o. c ) = ( ( b .o. c ) .o. X ) <-> ( ( X .o. X ) .o. c ) = ( ( X .o. c ) .o. X ) ) )
+40::oveq2                  |- ( c = Y -> ( ( X .o. X ) .o. c ) = ( ( X .o. X ) .o. Y ) )
+41:27:oveq1d               |- ( c = Y -> ( ( X .o. c ) .o. X ) = ( ( X .o. Y ) .o. X ) )
+42:40,41:eqeq12d          |- ( c = Y -> ( ( ( X .o. X ) .o. c ) = ( ( X .o. c ) .o. X ) <-> ( ( X .o. X ) .o. Y ) = ( ( X .o. Y ) .o. X ) ) )
+43:35,39,42:rspc3v       |- ( ( X e. B /\ X e. B /\ Y e. B ) -> ( A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) -> ( ( X .o. X ) .o. Y ) = ( ( X .o. Y ) .o. X ) ) )
+44:4,4,5,43:syl3anc
+                        |- ( ph -> ( A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) -> ( ( X .o. X ) .o. Y ) = ( ( X .o. Y ) .o. X ) ) )
+45:3,44:mpd            |- ( ph -> ( ( X .o. X ) .o. Y ) = ( ( X .o. Y ) .o. X ) )
+46::id                     |- ( a = X -> a = X )
+47:46,46:oveq12d          |- ( a = X -> ( a .o. a ) = ( X .o. X ) )
+48:47,46:eqeq12d         |- ( a = X -> ( ( a .o. a ) = a <-> ( X .o. X ) = X ) )
+49:48,2,4:rspcdva       |- ( ph -> ( X .o. X ) = X )
+50:49:oveq1d           |- ( ph -> ( ( X .o. X ) .o. Y ) = ( X .o. Y ) )
+51:45,50:eqtr3d       |- ( ph -> ( ( X .o. Y ) .o. X ) = ( X .o. Y ) )
+52:51:oveq1d         |- ( ph -> ( ( ( X .o. Y ) .o. X ) .o. Y ) = ( ( X .o. Y ) .o. Y ) )
+53:11:oveq1d            |- ( b = Y -> ( ( X .o. b ) .o. c ) = ( ( X .o. Y ) .o. c ) )
+54::oveq1                |- ( b = Y -> ( b .o. c ) = ( Y .o. c ) )
+55:54:oveq1d            |- ( b = Y -> ( ( b .o. c ) .o. X ) = ( ( Y .o. c ) .o. X ) )
+56:53,55:eqeq12d       |- ( b = Y -> ( ( ( X .o. b ) .o. c ) = ( ( b .o. c ) .o. X ) <-> ( ( X .o. Y ) .o. c ) = ( ( Y .o. c ) .o. X ) ) )
+57::oveq2               |- ( c = Y -> ( ( X .o. Y ) .o. c ) = ( ( X .o. Y ) .o. Y ) )
+58::oveq2                |- ( c = Y -> ( Y .o. c ) = ( Y .o. Y ) )
+59:58:oveq1d            |- ( c = Y -> ( ( Y .o. c ) .o. X ) = ( ( Y .o. Y ) .o. X ) )
+60:57,59:eqeq12d       |- ( c = Y -> ( ( ( X .o. Y ) .o. c ) = ( ( Y .o. c ) .o. X ) <-> ( ( X .o. Y ) .o. Y ) = ( ( Y .o. Y ) .o. X ) ) )
+61:35,56,60:rspc3v    |- ( ( X e. B /\ Y e. B /\ Y e. B ) -> ( A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) -> ( ( X .o. Y ) .o. Y ) = ( ( Y .o. Y ) .o. X ) ) )
+62:4,5,5,61:syl3anc
+                     |- ( ph -> ( A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) -> ( ( X .o. Y ) .o. Y ) = ( ( Y .o. Y ) .o. X ) ) )
+63:3,62:mpd         |- ( ph -> ( ( X .o. Y ) .o. Y ) = ( ( Y .o. Y ) .o. X ) )
+64::id                  |- ( a = Y -> a = Y )
+65:64,64:oveq12d       |- ( a = Y -> ( a .o. a ) = ( Y .o. Y ) )
+66:65,64:eqeq12d      |- ( a = Y -> ( ( a .o. a ) = a <-> ( Y .o. Y ) = Y ) )
+67:66,2,5:rspcdva    |- ( ph -> ( Y .o. Y ) = Y )
+68:67:oveq1d        |- ( ph -> ( ( Y .o. Y ) .o. X ) = ( Y .o. X ) )
+69:32,52,16:3eqtr3rd
+                    |- ( ph -> ( X .o. Y ) = ( ( X .o. Y ) .o. Y ) )
+qed:69,63,68:3eqtrd
+                   |- ( ph -> ( X .o. Y ) = ( Y .o. X ) )
+
+$= ( co wceq wral wcel oveq2 oveq1d eqeq12d cv wi oveq1 eleq1d wa eqidd rspc2vd
+   mpd rspc3v syl3anc id oveq12d rspcdva eqtr3d 3eqtr3rd 3eqtrd ) ACDENZUQDENZD
+   DENZCENZDCENAUQCENZDENZUQUQENZURUQAFUAZGUAZENZHUAZENZVEVGENZVDENZOZHBPGBPFBP
+   ZVBVCOZKAUQBQZCBQZDBQZVLVMUBAVFBQZGBPFBPVNIAVNCVEENZBQVQFGCDBBBVDCOZVFVRBVDC
+   VEEUCZUDVEDOZVRUQBVEDCERZUDLAVSUEBUFMUGUHZLMVKVMUQVEENZVGENZVIUQENZOVAVGENZC
+   VGENZUQENZOFGHUQCDBBBVDUQOZVHWEVJWFWJVFWDVGEVDUQVEEUCSVDUQVIERTVECOZWEWGWFWI
+   WKWDVAVGEVECUQERSWKVIWHUQEVECVGEUCZSTVGDOZWGVBWIVCVGDVAERWMWHUQUQEVGDCERZSTU
+   IUJUHAVAUQDEACCENZDENZVAUQAVLWPVAOZKAVOVOVPVLWQUBLLMVKWQVRVGENZVICENZOZWOVGE
+   NZWHCENZOFGHCCDBBBVSVHWRVJWSVSVFVRVGEVTSVDCVIERTZWKWRXAWSXBWKVRWOVGEVECCERSW
+   KVIWHCEWLSTWMXAWPXBVAVGDWOERWMWHUQCEWNSTUIUJUHAWOCDEAVDVDENZVDOZWOCOFBCVSXDW
+   OVDCVSVDCVDCEVSUKZXFULXFTJLUMSUNSAXEVCUQOFBUQWJXDVCVDUQWJVDUQVDUQEWJUKZXGULX
+   GTJWCUMUOAVLURUTOZKAVOVPVPVLXHUBLMMVKXHWTUQVGENZDVGENZCENZOFGHCDDBBBXCWAWRXI
+   WSXKWAVRUQVGEWBSWAVIXJCEVEDVGEUCSTWMXIURXKUTVGDUQERWMXJUSCEVGDDERSTUIUJUHAUS
+   DCEAXEUSDOFBDVDDOZXDUSVDDXLVDDVDDEXLUKZXMULXMTJMUMSUP $.
+
+$d B a
+$d X a
+$d Y a
+$d .o. a
+$d a b
+$d a ph
+$d B b
+$d X b
+$d Y b
+$d a c
+$d b c
+$d B c
+$d X c
+$d Y c
+$d .o. c
+$d .o. b

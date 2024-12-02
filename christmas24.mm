@@ -2,12 +2,15 @@ $[ set.mm $]
 
 $( ADVENT OF METAMATH 2024!
 
-   The task is to prove several results about magmas, some of them appearing in the Putnam exam,
-   one being the famous Eckmann-Hilton argument, see https://en.wikipedia.org/wiki/Eckmann%E2%80%93Hilton_argument ,
-   while the last one is the result of Mendelsohn and Padmanabhan, that a certain identity characterizes boolean groups.
+   The task is to prove several results about magmas, some of them appearing in
+   the Putnam exam, one being the famous Eckmann-Hilton argument, 
+   see https://en.wikipedia.org/wiki/Eckmann%E2%80%93Hilton_argument ,
+   while the last one is the result of Mendelsohn and Padmanabhan, that a
+   certain identity characterizes boolean groups.
 
-   Since most of those results concern universal algebra, not all of them are formulated in terms of set.mm's magma structure ` Mgm ` ,
-   but it should be fairly easy to convert them to that form if needed.
+   Since most of those results concern universal algebra, not all of them are
+   formulated in terms of set.mm's magma structure ` Mgm ` , but it should be 
+   fairly easy to convert them to that form if needed.
    Have fun!
 $)
 
@@ -29,16 +32,33 @@ $)
       CUNEQUHVHVLUJBUNDCEPUHJAVMSBTKUCUDAVGSBTKUCUDUI $.
   $}
 
-${
-  $( If every element is an idempotent and a certain "cyclic" identity holds, then the operation is commutative. $)
-  $d a B X Y .o. $. $d b B X Y .o. $. $d c B X Y .o. $.
-  idemp.a $e |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B ) $.
-  idemp.b $e |- ( ph -> A. a e. B ( a .o. a ) = a ) $.
-  idemp.c $e |- ( ph -> A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( ( b .o. c ) .o. a ) ) $.
-  idemp.d $e |- ( ph -> X e. B ) $.
-  idemp.e $e |- ( ph -> Y e. B ) $.
-  idemp $p |- ( ph -> ( X .o. Y ) = ( Y .o. X ) ) $= ? $.
-$}
+  ${
+    $d .o. a b c $. $d B a b c $. $d X a b c $. $d Y a b c $. $d a ph $.
+    idemp.a $e |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B ) $.
+    idemp.b $e |- ( ph -> A. a e. B ( a .o. a ) = a ) $.
+    idemp.c $e |- ( ph -> A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) =
+       ( ( b .o. c ) .o. a ) ) $.
+    idemp.d $e |- ( ph -> X e. B ) $.
+    idemp.e $e |- ( ph -> Y e. B ) $.
+    $( If every element is an idempotent and a certain "cyclic" identity holds,
+       then the operation is commutative. $)
+    idemp $p |- ( ph -> ( X .o. Y ) = ( Y .o. X ) ) $=
+      ( co wceq wral wcel oveq2 oveq1d eqeq12d cv wi oveq1 eleq1d eqidd rspc2vd
+      wa mpd rspc3v syl3anc id oveq12d rspcdva eqtr3d 3eqtr3rd 3eqtrd ) ACDENZU
+      QDENZDDENZCENZDCENAUQCENZDENZUQUQENZURUQAFUAZGUAZENZHUAZENZVEVGENZVDENZOZ
+      HBPGBPFBPZVBVCOZKAUQBQZCBQZDBQZVLVMUBAVFBQZGBPFBPVNIAVNCVEENZBQVQFGCDBBBV
+      DCOZVFVRBVDCVEEUCZUDVEDOZVRUQBVEDCERZUDLAVSUGBUEMUFUHZLMVKVMUQVEENZVGENZV
+      IUQENZOVAVGENZCVGENZUQENZOFGHUQCDBBBVDUQOZVHWEVJWFWJVFWDVGEVDUQVEEUCSVDUQ
+      VIERTVECOZWEWGWFWIWKWDVAVGEVECUQERSWKVIWHUQEVECVGEUCZSTVGDOZWGVBWIVCVGDVA
+      ERWMWHUQUQEVGDCERZSTUIUJUHAVAUQDEACCENZDENZVAUQAVLWPVAOZKAVOVOVPVLWQUBLLM
+      VKWQVRVGENZVICENZOZWOVGENZWHCENZOFGHCCDBBBVSVHWRVJWSVSVFVRVGEVTSVDCVIERTZ
+      WKWRXAWSXBWKVRWOVGEVECCERSWKVIWHCEWLSTWMXAWPXBVAVGDWOERWMWHUQCEWNSTUIUJUH
+      AWOCDEAVDVDENZVDOZWOCOFBCVSXDWOVDCVSVDCVDCEVSUKZXFULXFTJLUMSUNSAXEVCUQOFB
+      UQWJXDVCVDUQWJVDUQVDUQEWJUKZXGULXGTJWCUMUOAVLURUTOZKAVOVPVPVLXHUBLMMVKXHW
+      TUQVGENZDVGENZCENZOFGHCDDBBBXCWAWRXIWSXKWAVRUQVGEWBSWAVIXJCEVEDVGEUCSTWMX
+      IURXKUTVGDUQERWMXJUSCEVGDDERSTUIUJUHAUSDCEAXEUSDOFBDVDDOZXDUSVDDXLVDDVDDE
+      XLUKZXMULXMTJMUMSUP $.
+  $}
 
 ${
   $( If multiplying two times from the left (and the right) is an identity mapping, then the operation is commutative. $)
