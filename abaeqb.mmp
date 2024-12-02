@@ -1,0 +1,61 @@
+$theorem abaeqb
+
+* If for all ` a, b ` in ` B ` we have ` a .o. ( b .o. a ) = b ` , then we also have ` ( a .o.  b ) .o. a = b ` .
+
+h1::abaeqb.a           |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B )
+h2::abaeqb.b          |- ( ph -> A. a e. B A. b e. B ( a .o. ( b .o. a ) ) = b )
+h3::abaeqb.x            |- ( ph -> X e. B )
+h4::abaeqb.y            |- ( ph -> Y e. B )
+5::id                   |- ( a = ( X .o. Y ) -> a = ( X .o. Y ) )
+6::oveq2                |- ( a = ( X .o. Y ) -> ( b .o. a ) = ( b .o. ( X .o. Y ) ) )
+7:5,6:oveq12d          |- ( a = ( X .o. Y ) -> ( a .o. ( b .o. a ) ) = ( ( X .o. Y ) .o. ( b .o. ( X .o. Y ) ) ) )
+8:7:eqeq1d            |- ( a = ( X .o. Y ) -> ( ( a .o. ( b .o. a ) ) = b <-> ( ( X .o. Y ) .o. ( b .o. ( X .o. Y ) ) ) = b ) )
+9::oveq1                |- ( b = Y -> ( b .o. ( X .o. Y ) ) = ( Y .o. ( X .o. Y ) ) )
+10:9:oveq2d            |- ( b = Y -> ( ( X .o. Y ) .o. ( b .o. ( X .o. Y ) ) ) = ( ( X .o. Y ) .o. ( Y .o. ( X .o. Y ) ) ) )
+11::id                 |- ( b = Y -> b = Y )
+12:10,11:eqeq12d      |- ( b = Y -> ( ( ( X .o. Y ) .o. ( b .o. ( X .o. Y ) ) ) = b <-> ( ( X .o. Y ) .o. ( Y .o. ( X .o. Y ) ) ) = Y ) )
+13::oveq1                |- ( a = X -> ( a .o. b ) = ( X .o. b ) )
+14:13:eleq1d            |- ( a = X -> ( ( a .o. b ) e. B <-> ( X .o. b ) e. B ) )
+15::oveq2                |- ( b = Y -> ( X .o. b ) = ( X .o. Y ) )
+16:15:eleq1d            |- ( b = Y -> ( ( X .o. b ) e. B <-> ( X .o. Y ) e. B ) )
+17::eqidd               |- ( ( ph /\ a = X ) -> B = B )
+18:14,16,3,17,4:rspc2vd
+                       |- ( ph -> ( A. a e. B A. b e. B ( a .o. b ) e. B -> ( X .o. Y ) e. B ) )
+19:1,18:mpd           |- ( ph -> ( X .o. Y ) e. B )
+20::eqidd             |- ( ( ph /\ a = ( X .o. Y ) ) -> B = B )
+21::eqidd              |- ( ( ph /\ a = Y ) -> B = B )
+22:8,12,19,20,4:rspc2vd
+                     |- ( ph -> ( A. a e. B A. b e. B ( a .o. ( b .o. a ) ) = b -> ( ( X .o. Y ) .o. ( Y .o. ( X .o. Y ) ) ) = Y ) )
+23:2,22:mpd         |- ( ph -> ( ( X .o. Y ) .o. ( Y .o. ( X .o. Y ) ) ) = Y )
+24::id                   |- ( a = Y -> a = Y )
+25::oveq2                |- ( a = Y -> ( b .o. a ) = ( b .o. Y ) )
+26:24,25:oveq12d        |- ( a = Y -> ( a .o. ( b .o. a ) ) = ( Y .o. ( b .o. Y ) ) )
+27:26:eqeq1d           |- ( a = Y -> ( ( a .o. ( b .o. a ) ) = b <-> ( Y .o. ( b .o. Y ) ) = b ) )
+28::oveq1                |- ( b = X -> ( b .o. Y ) = ( X .o. Y ) )
+29:28:oveq2d            |- ( b = X -> ( Y .o. ( b .o. Y ) ) = ( Y .o. ( X .o. Y ) ) )
+30::id                  |- ( b = X -> b = X )
+31:29,30:eqeq12d       |- ( b = X -> ( ( Y .o. ( b .o. Y ) ) = b <-> ( Y .o. ( X .o. Y ) ) = X ) )
+32:27,31,4,21,3:rspc2vd
+                      |- ( ph -> ( A. a e. B A. b e. B ( a .o. ( b .o. a ) ) = b -> ( Y .o. ( X .o. Y ) ) = X ) )
+33:2,32:mpd          |- ( ph -> ( Y .o. ( X .o. Y ) ) = X )
+34:33:oveq2d        |- ( ph -> ( ( X .o. Y ) .o. ( Y .o. ( X .o. Y ) ) ) = ( ( X .o. Y ) .o. X ) )
+qed:34,23:eqtr3d   |- ( ph -> ( ( X .o. Y ) .o. X ) = Y )
+
+$= ( co wceq wral id oveq2 oveq1 oveq2d wa eqidd oveq12d eqeq1d eqeq12d rspc2vd
+   cv mpd wcel eleq1d eqtr3d ) ACDELZDUJELZELZUJCELDAUKCUJEAFUEZGUEZUMELZELZUNM
+   ZGBNFBNZUKCMZIAUSDUNDELZELZUNMUQFGDCBBBUMDMZUPVAUNVBUMDUOUTEVBOUMDUNEPUAUBUN
+   CMZVAUKUNCVCUTUJDEUNCDEQRVCOUCKAVBSBTJUDUFRAURULDMZIAVDUJUNUJELZELZUNMUQFGUJ
+   DBBBUMUJMZUPVFUNVGUMUJUOVEEVGOUMUJUNEPUAUBUNDMZVFULUNDVHVEUKUJEUNDUJEQRVHOUC
+   AUMUNELZBUGZGBNFBNUJBUGZHAVKCUNELZBUGVJFGCDBBBUMCMZVIVLBUMCUNEQUHVHVLUJBUNDC
+   EPUHJAVMSBTKUDUFAVGSBTKUDUFUI $.
+
+$d X a
+$d X b
+$d a b
+$d a ph
+$d .o. b
+$d .o. a
+$d Y b
+$d B a
+$d B b
+$d Y a
