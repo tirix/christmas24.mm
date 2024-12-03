@@ -1,0 +1,76 @@
+$theorem aabbaa
+
+* If multiplying two times from the left (and the right) is an identity mapping, then the operation is commutative.
+
+h1::aabbaa.a             |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B )
+h2::aabbaa.b            |- ( ph -> A. a e. B A. b e. B ( a .o. ( a .o. b ) ) = b )
+h3::aabbaa.c           |- ( ph -> A. a e. B A. b e. B ( ( b .o. a ) .o. a ) = b )
+h4::aabbaa.d              |- ( ph -> X e. B )
+h5::aabbaa.e              |- ( ph -> Y e. B )
+6::oveq2                  |- ( a = ( X .o. Y ) -> ( b .o. a ) = ( b .o. ( X .o. Y ) ) )
+7::id                     |- ( a = ( X .o. Y ) -> a = ( X .o. Y ) )
+8:6,7:oveq12d            |- ( a = ( X .o. Y ) -> ( ( b .o. a ) .o. a ) = ( ( b .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) )
+9:8:eqeq1d              |- ( a = ( X .o. Y ) -> ( ( ( b .o. a ) .o. a ) = b <-> ( ( b .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = b ) )
+10::oveq1                 |- ( b = X -> ( b .o. ( X .o. Y ) ) = ( X .o. ( X .o. Y ) ) )
+11:10:oveq1d             |- ( b = X -> ( ( b .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = ( ( X .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) )
+12::id                   |- ( b = X -> b = X )
+13:11,12:eqeq12d        |- ( b = X -> ( ( ( b .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = b <-> ( ( X .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = X ) )
+14::oveq1                  |- ( a = X -> ( a .o. b ) = ( X .o. b ) )
+15:14:eleq1d              |- ( a = X -> ( ( a .o. b ) e. B <-> ( X .o. b ) e. B ) )
+16::oveq2                  |- ( b = Y -> ( X .o. b ) = ( X .o. Y ) )
+17:16:eleq1d              |- ( b = Y -> ( ( X .o. b ) e. B <-> ( X .o. Y ) e. B ) )
+18::eqidd          |- ( ( ph /\ a = ( X .o. Y ) ) -> B = B )
+19::eqidd                 |- ( ( ph /\ a = X ) -> B = B )
+20:15,17,4,19,5:rspc2vd
+                         |- ( ph -> ( A. a e. B A. b e. B ( a .o. b ) e. B -> ( X .o. Y ) e. B ) )
+21:1,20:mpd             |- ( ph -> ( X .o. Y ) e. B )
+22::eqidd               |- ( ( ph /\ a = ( X .o. Y ) ) -> B = B )
+23:9,13,21,22,4:rspc2vd
+                       |- ( ph -> ( A. a e. B A. b e. B ( ( b .o. a ) .o. a ) = b -> ( ( X .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = X ) )
+24:3,23:mpd           |- ( ph -> ( ( X .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = X )
+25::id                     |- ( a = X -> a = X )
+26:25,14:oveq12d          |- ( a = X -> ( a .o. ( a .o. b ) ) = ( X .o. ( X .o. b ) ) )
+27:26:eqeq1d             |- ( a = X -> ( ( a .o. ( a .o. b ) ) = b <-> ( X .o. ( X .o. b ) ) = b ) )
+28:16:oveq2d              |- ( b = Y -> ( X .o. ( X .o. b ) ) = ( X .o. ( X .o. Y ) ) )
+29::id                    |- ( b = Y -> b = Y )
+30:28,29:eqeq12d         |- ( b = Y -> ( ( X .o. ( X .o. b ) ) = b <-> ( X .o. ( X .o. Y ) ) = Y ) )
+31:27,30,4,19,5:rspc2vd
+                        |- ( ph -> ( A. a e. B A. b e. B ( a .o. ( a .o. b ) ) = b -> ( X .o. ( X .o. Y ) ) = Y ) )
+32:2,31:mpd            |- ( ph -> ( X .o. ( X .o. Y ) ) = Y )
+33:32:oveq1d          |- ( ph -> ( ( X .o. ( X .o. Y ) ) .o. ( X .o. Y ) ) = ( Y .o. ( X .o. Y ) ) )
+34:24,33:eqtr3d      |- ( ph -> X = ( Y .o. ( X .o. Y ) ) )
+35:34:oveq2d        |- ( ph -> ( Y .o. X ) = ( Y .o. ( Y .o. ( X .o. Y ) ) ) )
+36::id                  |- ( a = Y -> a = Y )
+37::oveq1               |- ( a = Y -> ( a .o. b ) = ( Y .o. b ) )
+38:36,37:oveq12d       |- ( a = Y -> ( a .o. ( a .o. b ) ) = ( Y .o. ( Y .o. b ) ) )
+39:38:eqeq1d          |- ( a = Y -> ( ( a .o. ( a .o. b ) ) = b <-> ( Y .o. ( Y .o. b ) ) = b ) )
+40::oveq2               |- ( b = ( X .o. Y ) -> ( Y .o. b ) = ( Y .o. ( X .o. Y ) ) )
+41:40:oveq2d           |- ( b = ( X .o. Y ) -> ( Y .o. ( Y .o. b ) ) = ( Y .o. ( Y .o. ( X .o. Y ) ) ) )
+42::id                 |- ( b = ( X .o. Y ) -> b = ( X .o. Y ) )
+43:41,42:eqeq12d      |- ( b = ( X .o. Y ) -> ( ( Y .o. ( Y .o. b ) ) = b <-> ( Y .o. ( Y .o. ( X .o. Y ) ) ) = ( X .o. Y ) ) )
+44::eqidd             |- ( ( ph /\ a = Y ) -> B = B )
+45:39,43,5,44,21:rspc2vd
+                     |- ( ph -> ( A. a e. B A. b e. B ( a .o. ( a .o. b ) ) = b -> ( Y .o. ( Y .o. ( X .o. Y ) ) ) = ( X .o. Y ) ) )
+46:2,45:mpd         |- ( ph -> ( Y .o. ( Y .o. ( X .o. Y ) ) ) = ( X .o. Y ) )
+qed:35,46:eqtr2d   |- ( ph -> ( X .o. Y ) = ( Y .o. X ) )
+
+$= ( co wceq wral oveq2 id oveq12d rspc2vd mpd eqeq1d oveq1 oveq1d eqeq12d wcel
+   cv eleq1d wa eqidd oveq2d eqtr3d eqtr2d ) ADCEMDDCDEMZEMZEMZUMACUNDEACUMEMZU
+   MEMZCUNAGUFZFUFZEMZUSEMZURNZGBOFBOUQCNZJAVCURUMEMZUMEMZURNVBFGUMCBBBUSUMNZVA
+   VEURVFUTVDUSUMEUSUMUREPVFQRUAURCNZVEUQURCVGVDUPUMEURCUMEUBUCVGQUDAUSUREMZBUE
+   ZGBOFBOUMBUEZHAVJCUREMZBUEVIFGCDBBBUSCNZVHVKBUSCUREUBZUGURDNZVKUMBURDCEPZUGK
+   AVLUHBUIZLSTZAVFUHBUIKSTAUPDUMEAUSVHEMZURNZGBOFBOZUPDNZIAWACVKEMZURNVSFGCDBB
+   BVLVRWBURVLUSCVHVKEVLQVMRUAVNWBUPURDVNVKUMCEVOUJVNQUDKVPLSTUCUKUJAVTUOUMNZIA
+   WCDDUREMZEMZURNVSFGDUMBBBUSDNZVRWEURWFUSDVHWDEWFQUSDUREUBRUAURUMNZWEUOURUMWG
+   WDUNDEURUMDEPUJWGQUDLAWFUHBUIVQSTUL $.
+
+$d X a
+$d X b
+$d .o. a
+$d .o. b
+$d Y a
+$d Y b
+$d a b
+$d a ph
+$d B a
+$d B b

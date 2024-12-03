@@ -60,16 +60,26 @@ $)
       XLUKZXMULXMTJMUMSUP $.
   $}
 
-${
-  $( If multiplying two times from the left (and the right) is an identity mapping, then the operation is commutative. $)
-  $d a B X Y .o. $. $d b B X Y .o. $. $d c B X Y .o. $.
-  aabbaa.a $e |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B ) $.
-  aabbaa.b $e |- ( ph -> A. a e. B A. b e. B ( a .o. ( a .o. b ) ) = b ) $.
-  aabbaa.c $e |- ( ph -> A. a e. B A. b e. B ( ( b .o. a ) .o. a ) = b ) $.
-  aabbaa.d $e |- ( ph -> X e. B ) $.
-  aabbaa.e $e |- ( ph -> Y e. B ) $.
-  aabbaa $p |- ( ph -> ( X .o. Y ) = ( Y .o. X ) ) $= ? $.
-$}
+  ${
+    $d .o. a b $. $d B a b $. $d X a b $. $d Y a b $. $d a ph $.
+    aabbaa.a $e |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B ) $.
+    aabbaa.b $e |- ( ph -> A. a e. B A. b e. B ( a .o. ( a .o. b ) ) = b ) $.
+    aabbaa.c $e |- ( ph -> A. a e. B A. b e. B ( ( b .o. a ) .o. a ) = b ) $.
+    aabbaa.d $e |- ( ph -> X e. B ) $.
+    aabbaa.e $e |- ( ph -> Y e. B ) $.
+    $( If multiplying two times from the left (and the right) is an identity
+       mapping, then the operation is commutative. $)
+    aabbaa $p |- ( ph -> ( X .o. Y ) = ( Y .o. X ) ) $=
+      ( co wceq wral oveq2 id oveq12d rspc2vd mpd cv eqeq1d oveq1d eqeq12d wcel
+      oveq1 eleq1d wa eqidd oveq2d eqtr3d eqtr2d ) ADCEMDDCDEMZEMZEMZUMACUNDEAC
+      UMEMZUMEMZCUNAGUAZFUAZEMZUSEMZURNZGBOFBOUQCNZJAVCURUMEMZUMEMZURNVBFGUMCBB
+      BUSUMNZVAVEURVFUTVDUSUMEUSUMUREPVFQRUBURCNZVEUQURCVGVDUPUMEURCUMEUFUCVGQU
+      DAUSUREMZBUEZGBOFBOUMBUEZHAVJCUREMZBUEVIFGCDBBBUSCNZVHVKBUSCUREUFZUGURDNZ
+      VKUMBURDCEPZUGKAVLUHBUIZLSTZAVFUHBUIKSTAUPDUMEAUSVHEMZURNZGBOFBOZUPDNZIAW
+      ACVKEMZURNVSFGCDBBBVLVRWBURVLUSCVHVKEVLQVMRUBVNWBUPURDVNVKUMCEVOUJVNQUDKV
+      PLSTUCUKUJAVTUOUMNZIAWCDDUREMZEMZURNVSFGDUMBBBUSDNZVRWEURWFUSDVHWDEWFQUSD
+      UREUFRUBURUMNZWEUOURUMWGWDUNDEURUMDEPUJWGQUDLAWFUHBUIVQSTUL $.
+  $}
 
 ${
   $( The Eckmann-Hilton argument. If for two unital magmas, represented here by the operation ` .o. ` with unit ` E `
