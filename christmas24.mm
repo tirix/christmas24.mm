@@ -81,17 +81,40 @@ $)
       UREUFRUBURUMNZWEUOURUMWGWDUNDEURUMDEPUJWGQUDLAWFUHBUIVQSTUL $.
   $}
 
-${
+  ${
+    $d .(x) a b c d $. $d .o. a b c d $. $d B a b c d $. $d E a b c d $.
+    $d I a b c d $. $d a c ph $.
+    eckmannhilton.a $e |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B ) $.
+    eckmannhilton.b $e |- ( ph -> A. a e. B A. b e. B ( a .(x) b ) e. B ) $.
+    eckmannhilton.c $e |- ( ph -> A. a e. B ( ( a .o. E ) = a /\ ( E .o. a ) =
+       a ) ) $.
+    eckmannhilton.d $e |- ( ph -> A. a e. B ( ( a .(x) I ) = a /\ ( I .(x) a )
+       = a ) ) $.
+    eckmannhilton.e $e |- ( ph -> ( E e. B /\ I e. B ) ) $.
+    eckmannhilton.f $e |- ( ph -> A. a e. B A. b e. B A. c e. B A. d e. B ( ( a
+       .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) ) $.
+    $( Lemma : First part of the Eckmann-Hilton argument $)
+    eckmannhiltonlem1 $p |- ( ph -> E = I ) $=
+      ( co wceq wral eqeq12d cv oveq1 oveq1d 2ralbidv oveq2 oveq2d simprd eqidd
+      wcel wa simpld rspc2vd mpd id anbi12d rspcdva oveq12d 3eqtr3d ) ADDFQZEEC
+      QZDEAEDCQZDECQZFQZEDFQZDEFQZCQZUSUTAVAIUAZJUAZCQZFQZEVGFQZDVHFQZCQZRZJBSI
+      BSZVCVFRZAGUAZHUAZCQZVIFQZVQVGFQZVRVHFQZCQZRZJBSIBSZHBSGBSVOPAVOEVRCQZVIF
+      QZVKWBCQZRZJBSIBSWEGHEDBBBVQERZWDWIIJBBWJVTWGWCWHWJVSWFVIFVQEVRCUBUCWJWAV
+      KWBCVQEVGFUBUCTUDVRDRZWIVNIJBBWKWGVJWHVMWKWFVAVIFVRDECUEUCWKWBVLVKCVRDVHF
+      UBUFTUDADBUIZEBUIZOUGZAWJUJBUHAWLWMOUKZULUMAVPVADVHCQZFQZVDVLCQZRVNIJDEBB
+      BVGDRZVJWQVMWRWSVIWPVAFVGDVHCUBUFWSVKVDVLCVGDEFUEUCTVHERZWQVCWRVFWTWPVBVA
+      FVHEDCUEUFWTVLVEVDCVHEDFUEUFTWOAWSUJBUHWNULUMAVADVBDFAVBDRZVADRZAVQECQZVQ
+      RZEVQCQZVQRZUJZXAXBUJGBDVQDRZXDXAXFXBXHXCVBVQDVQDECUBXHUNZTXHXEVAVQDVQDEC
+      UEXITUONWOUPZUGAXAXBXJUKUQAVDEVEECAVDERZVEERZAVQDFQZVQRZDVQFQZVQRZUJZXKXL
+      UJGBEWJXNXKXPXLWJXMVDVQEVQEDFUBWJUNZTWJXOVEVQEVQEDFUEXRTUOMWNUPZUKAXKXLXS
+      UGUQURAUSDRZXTAXQXTXTUJGBDXHXNXTXPXTXHXMUSVQDVQDDFUBXITXHXOUSVQDVQDDFUEXI
+      TUOMWOUPUKAUTERZYAAXGYAYAUJGBEWJXDYAXFYAWJXCUTVQEVQEECUBXRTWJXEUTVQEVQEEC
+      UEXRTUONWNUPUKUR $.
+
   $( The Eckmann-Hilton argument. If for two unital magmas, represented here by the operation ` .o. ` with unit ` E `
      and the operation ` .(x) ` with unit ` I ` , on the same base set ` B ` an identity ` ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) `
      holds, then these magmas coincide and the operation is associative and commutative. $)
   $d a B E I .o. .(x) $. $d b B E I .o. .(x) $. $d c B E I .o. .(x) $.
-  eckmannhilton.a $e |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B ) $.
-  eckmannhilton.b $e |- ( ph -> A. a e. B A. b e. B ( a .(x) b ) e. B ) $.
-  eckmannhilton.c $e |- ( ph -> A. a e. B ( ( a .o. E ) = a /\ ( E .o. a ) = a ) ) $.
-  eckmannhilton.d $e |- ( ph -> A. a e. B ( ( a .(x) I ) = a /\ ( I .(x) a ) = a ) ) $.
-  eckmannhilton.e $e |- ( ph -> ( E e. B /\ I e. B ) ) $.
-  eckmannhilton.f $e |- ( ph -> A. a e. B A. b e. B A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) ) $.
   eckmannhilton $p |- ( ph -> ( E = I /\ A. a e. B A. b e. B ( ( a .o. b ) = ( a .(x) b ) /\ ( a .o. b ) = ( b .o. a ) ) /\
                         A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( a .o. ( b .o. c ) ) ) ) $= ? $.
 $}

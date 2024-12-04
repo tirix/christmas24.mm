@@ -1,0 +1,130 @@
+$theorem eckmannhiltonlem1
+
+* Lemma : First part of the Eckmann-Hilton argument
+
+h1::eckmannhilton.a
+                   |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B )
+h2::eckmannhilton.b
+                   |- ( ph -> A. a e. B A. b e. B ( a .(x) b ) e. B )
+h3::eckmannhilton.c
+                        |- ( ph -> A. a e. B ( ( a .o. E ) = a /\ ( E .o. a ) = a ) )
+h4::eckmannhilton.d
+                        |- ( ph -> A. a e. B ( ( a .(x) I ) = a /\ ( I .(x) a ) = a ) )
+h5::eckmannhilton.e
+                         |- ( ph -> ( E e. B /\ I e. B ) )
+h6::eckmannhilton.f
+                       |- ( ph -> A. a e. B A. b e. B A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) )
+7::oveq1                   |- ( a = I -> ( a .(x) b ) = ( I .(x) b ) )
+8:7:oveq1d                |- ( a = I -> ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( I .(x) b ) .o. ( c .(x) d ) ) )
+9::oveq1                   |- ( a = I -> ( a .o. c ) = ( I .o. c ) )
+10:9:oveq1d               |- ( a = I -> ( ( a .o. c ) .(x) ( b .o. d ) ) = ( ( I .o. c ) .(x) ( b .o. d ) ) )
+11:8,10:eqeq12d          |- ( a = I -> ( ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) <-> ( ( I .(x) b ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( b .o. d ) ) ) )
+12::oveq2                  |- ( b = E -> ( I .(x) b ) = ( I .(x) E ) )
+13:12:oveq1d              |- ( b = E -> ( ( I .(x) b ) .o. ( c .(x) d ) ) = ( ( I .(x) E ) .o. ( c .(x) d ) ) )
+14::oveq1                  |- ( b = E -> ( b .o. d ) = ( E .o. d ) )
+15:14:oveq2d              |- ( b = E -> ( ( I .o. c ) .(x) ( b .o. d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) )
+16:13,15:eqeq12d         |- ( b = E -> ( ( ( I .(x) b ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( b .o. d ) ) <-> ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) ) )
+17:11:2ralbidv          |- ( a = I -> ( A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) <-> A. c e. B A. d e. B ( ( I .(x) b ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( b .o. d ) ) ) )
+18:16:2ralbidv          |- ( b = E -> ( A. c e. B A. d e. B ( ( I .(x) b ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( b .o. d ) ) <-> A. c e. B A. d e. B ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) ) )
+19:5:simprd             |- ( ph -> I e. B )
+20::eqidd               |- ( ( ph /\ a = I ) -> B = B )
+21:5:simpld             |- ( ph -> E e. B )
+22:17,18,19,20,21:rspc2vd
+                       |- ( ph -> ( A. a e. B A. b e. B A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) -> A. c e. B A. d e. B ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) ) )
+23:6,22:mpd           |- ( ph -> A. c e. B A. d e. B ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) )
+24::oveq1                |- ( c = E -> ( c .(x) d ) = ( E .(x) d ) )
+25:24:oveq2d            |- ( c = E -> ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .(x) E ) .o. ( E .(x) d ) ) )
+26::oveq2                |- ( c = E -> ( I .o. c ) = ( I .o. E ) )
+27:26:oveq1d            |- ( c = E -> ( ( I .o. c ) .(x) ( E .o. d ) ) = ( ( I .o. E ) .(x) ( E .o. d ) ) )
+28:25,27:eqeq12d       |- ( c = E -> ( ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) <-> ( ( I .(x) E ) .o. ( E .(x) d ) ) = ( ( I .o. E ) .(x) ( E .o. d ) ) ) )
+29::oveq2                |- ( d = I -> ( E .(x) d ) = ( E .(x) I ) )
+30:29:oveq2d            |- ( d = I -> ( ( I .(x) E ) .o. ( E .(x) d ) ) = ( ( I .(x) E ) .o. ( E .(x) I ) ) )
+31::oveq2                |- ( d = I -> ( E .o. d ) = ( E .o. I ) )
+32:31:oveq2d            |- ( d = I -> ( ( I .o. E ) .(x) ( E .o. d ) ) = ( ( I .o. E ) .(x) ( E .o. I ) ) )
+33:30,32:eqeq12d       |- ( d = I -> ( ( ( I .(x) E ) .o. ( E .(x) d ) ) = ( ( I .o. E ) .(x) ( E .o. d ) ) <-> ( ( I .(x) E ) .o. ( E .(x) I ) ) = ( ( I .o. E ) .(x) ( E .o. I ) ) ) )
+34::eqidd              |- ( ( ph /\ c = E ) -> B = B )
+35:28,33,21,34,19:rspc2vd
+                      |- ( ph -> ( A. c e. B A. d e. B ( ( I .(x) E ) .o. ( c .(x) d ) ) = ( ( I .o. c ) .(x) ( E .o. d ) ) -> ( ( I .(x) E ) .o. ( E .(x) I ) ) = ( ( I .o. E ) .(x) ( E .o. I ) ) ) )
+36:23,35:mpd         |- ( ph -> ( ( I .(x) E ) .o. ( E .(x) I ) ) = ( ( I .o. E ) .(x) ( E .o. I ) ) )
+37::oveq1                 |- ( a = E -> ( a .(x) I ) = ( E .(x) I ) )
+38::id                    |- ( a = E -> a = E )
+39:37,38:eqeq12d         |- ( a = E -> ( ( a .(x) I ) = a <-> ( E .(x) I ) = E ) )
+40::oveq2                 |- ( a = E -> ( I .(x) a ) = ( I .(x) E ) )
+41:40,38:eqeq12d         |- ( a = E -> ( ( I .(x) a ) = a <-> ( I .(x) E ) = E ) )
+42:39,41:anbi12d        |- ( a = E -> ( ( ( a .(x) I ) = a /\ ( I .(x) a ) = a ) <-> ( ( E .(x) I ) = E /\ ( I .(x) E ) = E ) ) )
+43::oveq1                 |- ( a = I -> ( a .o. E ) = ( I .o. E ) )
+44::id                    |- ( a = I -> a = I )
+45:43,44:eqeq12d         |- ( a = I -> ( ( a .o. E ) = a <-> ( I .o. E ) = I ) )
+46::oveq2                 |- ( a = I -> ( E .o. a ) = ( E .o. I ) )
+47:46,44:eqeq12d         |- ( a = I -> ( ( E .o. a ) = a <-> ( E .o. I ) = I ) )
+48:45,47:anbi12d        |- ( a = I -> ( ( ( a .o. E ) = a /\ ( E .o. a ) = a ) <-> ( ( I .o. E ) = I /\ ( E .o. I ) = I ) ) )
+49:42,4,21:rspcdva     |- ( ph -> ( ( E .(x) I ) = E /\ ( I .(x) E ) = E ) )
+50:48,3,19:rspcdva     |- ( ph -> ( ( I .o. E ) = I /\ ( E .o. I ) = I ) )
+51:49:simprd          |- ( ph -> ( I .(x) E ) = E )
+52:49:simpld          |- ( ph -> ( E .(x) I ) = E )
+53:50:simpld          |- ( ph -> ( I .o. E ) = I )
+54:50:simprd          |- ( ph -> ( E .o. I ) = I )
+55:51,52:oveq12d     |- ( ph -> ( ( I .(x) E ) .o. ( E .(x) I ) ) = ( E .o. E ) )
+56:53,54:oveq12d     |- ( ph -> ( ( I .o. E ) .(x) ( E .o. I ) ) = ( I .(x) I ) )
+57:36,55,56:3eqtr3d
+                    |- ( ph -> ( E .o. E ) = ( I .(x) I ) )
+58::oveq1               |- ( a = E -> ( a .o. E ) = ( E .o. E ) )
+59:58,38:eqeq12d       |- ( a = E -> ( ( a .o. E ) = a <-> ( E .o. E ) = E ) )
+60::oveq2               |- ( a = E -> ( E .o. a ) = ( E .o. E ) )
+61:60,38:eqeq12d       |- ( a = E -> ( ( E .o. a ) = a <-> ( E .o. E ) = E ) )
+62:59,61:anbi12d      |- ( a = E -> ( ( ( a .o. E ) = a /\ ( E .o. a ) = a ) <-> ( ( E .o. E ) = E /\ ( E .o. E ) = E ) ) )
+63::oveq1               |- ( a = I -> ( a .(x) I ) = ( I .(x) I ) )
+64:63,44:eqeq12d       |- ( a = I -> ( ( a .(x) I ) = a <-> ( I .(x) I ) = I ) )
+65::oveq2               |- ( a = I -> ( I .(x) a ) = ( I .(x) I ) )
+66:65,44:eqeq12d       |- ( a = I -> ( ( I .(x) a ) = a <-> ( I .(x) I ) = I ) )
+67:64,66:anbi12d      |- ( a = I -> ( ( ( a .(x) I ) = a /\ ( I .(x) a ) = a ) <-> ( ( I .(x) I ) = I /\ ( I .(x) I ) = I ) ) )
+68:62,3,21:rspcdva   |- ( ph -> ( ( E .o. E ) = E /\ ( E .o. E ) = E ) )
+69:67,4,19:rspcdva   |- ( ph -> ( ( I .(x) I ) = I /\ ( I .(x) I ) = I ) )
+70:68:simpld        |- ( ph -> ( E .o. E ) = E )
+71:69:simpld        |- ( ph -> ( I .(x) I ) = I )
+qed:57,70,71:3eqtr3d
+                   |- ( ph -> E = I )
+
+$= ( co wceq wral eqeq12d cv oveq1 oveq1d 2ralbidv oveq2 oveq2d simprd wa eqidd
+   wcel simpld rspc2vd mpd id anbi12d rspcdva oveq12d 3eqtr3d ) ADDFQZEECQZDEAE
+   DCQZDECQZFQZEDFQZDEFQZCQZUSUTAVAIUAZJUAZCQZFQZEVGFQZDVHFQZCQZRZJBSIBSZVCVFRZ
+   AGUAZHUAZCQZVIFQZVQVGFQZVRVHFQZCQZRZJBSIBSZHBSGBSVOPAVOEVRCQZVIFQZVKWBCQZRZJ
+   BSIBSWEGHEDBBBVQERZWDWIIJBBWJVTWGWCWHWJVSWFVIFVQEVRCUBUCWJWAVKWBCVQEVGFUBUCT
+   UDVRDRZWIVNIJBBWKWGVJWHVMWKWFVAVIFVRDECUEUCWKWBVLVKCVRDVHFUBUFTUDADBUJZEBUJZ
+   OUGZAWJUHBUIAWLWMOUKZULUMAVPVADVHCQZFQZVDVLCQZRVNIJDEBBBVGDRZVJWQVMWRWSVIWPV
+   AFVGDVHCUBUFWSVKVDVLCVGDEFUEUCTVHERZWQVCWRVFWTWPVBVAFVHEDCUEUFWTVLVEVDCVHEDF
+   UEUFTWOAWSUHBUIWNULUMAVADVBDFAVBDRZVADRZAVQECQZVQRZEVQCQZVQRZUHZXAXBUHGBDVQD
+   RZXDXAXFXBXHXCVBVQDVQDECUBXHUNZTXHXEVAVQDVQDECUEXITUONWOUPZUGAXAXBXJUKUQAVDE
+   VEECAVDERZVEERZAVQDFQZVQRZDVQFQZVQRZUHZXKXLUHGBEWJXNXKXPXLWJXMVDVQEVQEDFUBWJ
+   UNZTWJXOVEVQEVQEDFUEXRTUOMWNUPZUKAXKXLXSUGUQURAUSDRZXTAXQXTXTUHGBDXHXNXTXPXT
+   XHXMUSVQDVQDDFUBXITXHXOUSVQDVQDDFUEXITUOMWOUPUKAUTERZYAAXGYAYAUHGBEWJXDYAXFY
+   AWJXCUTVQEVQEECUBXRTWJXEUTVQEVQEECUEXRTUONWNUPUKUR $.
+
+$d I a
+$d I b
+$d a b
+$d a ph
+$d a c
+$d a d
+$d E b
+$d B a
+$d B b
+$d .(x) a
+$d .(x) b
+$d .o. a
+$d .o. b
+$d b c
+$d b d
+$d E c
+$d E d
+$d c d
+$d c ph
+$d I d
+$d B c
+$d B d
+$d .(x) d
+$d .o. d
+$d I c
+$d .(x) c
+$d .o. c
+$d E a
