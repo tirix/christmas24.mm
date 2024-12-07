@@ -1,0 +1,149 @@
+$theorem eckmannhiltonlem4
+
+* Lemma : Third part of the Eckmann-Hilton argument, associativity.
+
+h1::eckmannhilton.a
+                        |- ( ph -> A. a e. B A. b e. B ( a .o. b ) e. B )
+h2::eckmannhilton.b
+                        |- ( ph -> A. a e. B A. b e. B ( a .(x) b ) e. B )
+h3::eckmannhilton.c
+                        |- ( ph -> A. a e. B ( ( a .o. E ) = a /\ ( E .o. a ) = a ) )
+h4::eckmannhilton.d
+                        |- ( ph -> A. a e. B ( ( a .(x) I ) = a /\ ( I .(x) a ) = a ) )
+h5::eckmannhilton.e
+                        |- ( ph -> ( E e. B /\ I e. B ) )
+h6::eckmannhilton.f
+                        |- ( ph -> A. a e. B A. b e. B A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) )
+h7::eckmannhiltonlem2.1
+                        |- ( ph -> X e. B )
+h8::eckmannhiltonlem2.2
+                        |- ( ph -> Y e. B )
+h9::eckmannhiltonlem3.3
+                        |- ( ph -> Z e. B )
+10:1,2,3,4,5,6:eckmannhiltonlem1
+                       |- ( ph -> E = I )
+11::oveq1               |- ( a = Y -> ( a .o. b ) = ( Y .o. b ) )
+12:11:eleq1d           |- ( a = Y -> ( ( a .o. b ) e. B <-> ( Y .o. b ) e. B ) )
+13::oveq2               |- ( b = Z -> ( Y .o. b ) = ( Y .o. Z ) )
+14:13:eleq1d           |- ( b = Z -> ( ( Y .o. b ) e. B <-> ( Y .o. Z ) e. B ) )
+15::eqidd              |- ( ( ph /\ a = Y ) -> B = B )
+16:12,14,8,15,9:rspc2vd
+                      |- ( ph -> ( A. a e. B A. b e. B ( a .o. b ) e. B -> ( Y .o. Z ) e. B ) )
+17:1,16:mpd          |- ( ph -> ( Y .o. Z ) e. B )
+18::oveq1                 |- ( a = Z -> ( a .(x) I ) = ( Z .(x) I ) )
+19::id                    |- ( a = Z -> a = Z )
+20:18,19:eqeq12d         |- ( a = Z -> ( ( a .(x) I ) = a <-> ( Z .(x) I ) = Z ) )
+21::oveq2                 |- ( a = Z -> ( I .(x) a ) = ( I .(x) Z ) )
+22:21,19:eqeq12d         |- ( a = Z -> ( ( I .(x) a ) = a <-> ( I .(x) Z ) = Z ) )
+23:20,22:anbi12d        |- ( a = Z -> ( ( ( a .(x) I ) = a /\ ( I .(x) a ) = a ) <-> ( ( Z .(x) I ) = Z /\ ( I .(x) Z ) = Z ) ) )
+24:23,4,9:rspcdva      |- ( ph -> ( ( Z .(x) I ) = Z /\ ( I .(x) Z ) = Z ) )
+25:24:simprd          |- ( ph -> ( I .(x) Z ) = Z )
+26:10:oveq2d          |- ( ph -> ( X .o. E ) = ( X .o. I ) )
+27::oveq1                 |- ( a = X -> ( a .o. E ) = ( X .o. E ) )
+28::id                    |- ( a = X -> a = X )
+29:27,28:eqeq12d         |- ( a = X -> ( ( a .o. E ) = a <-> ( X .o. E ) = X ) )
+30::oveq2                 |- ( a = X -> ( E .o. a ) = ( E .o. X ) )
+31:30,28:eqeq12d         |- ( a = X -> ( ( E .o. a ) = a <-> ( E .o. X ) = X ) )
+32:29,31:anbi12d        |- ( a = X -> ( ( ( a .o. E ) = a /\ ( E .o. a ) = a ) <-> ( ( X .o. E ) = X /\ ( E .o. X ) = X ) ) )
+33:32,3,7:rspcdva      |- ( ph -> ( ( X .o. E ) = X /\ ( E .o. X ) = X ) )
+34:33:simpld          |- ( ph -> ( X .o. E ) = X )
+35:26,34:eqtr3d      |- ( ph -> ( X .o. I ) = X )
+36:35:oveq1d        |- ( ph -> ( ( X .o. I ) .(x) ( Y .o. Z ) ) = ( X .(x) ( Y .o. Z ) ) )
+37:1,2,3,4,5,6,7,17:eckmannhiltonlem2
+                    |- ( ph -> ( X .o. ( Y .o. Z ) ) = ( X .(x) ( Y .o. Z ) ) )
+38:1,2,3,4,5,6,7,8:eckmannhiltonlem2
+                       |- ( ph -> ( X .o. Y ) = ( X .(x) Y ) )
+39:38:eqcomd          |- ( ph -> ( X .(x) Y ) = ( X .o. Y ) )
+40:39,25:oveq12d     |- ( ph -> ( ( X .(x) Y ) .o. ( I .(x) Z ) ) = ( ( X .o. Y ) .o. Z ) )
+41::oveq1                  |- ( a = X -> ( a .(x) b ) = ( X .(x) b ) )
+42:41:oveq1d              |- ( a = X -> ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( X .(x) b ) .o. ( c .(x) d ) ) )
+43::oveq1                  |- ( a = X -> ( a .o. c ) = ( X .o. c ) )
+44:43:oveq1d              |- ( a = X -> ( ( a .o. c ) .(x) ( b .o. d ) ) = ( ( X .o. c ) .(x) ( b .o. d ) ) )
+45:42,44:eqeq12d         |- ( a = X -> ( ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) <-> ( ( X .(x) b ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( b .o. d ) ) ) )
+46:45:2ralbidv          |- ( a = X -> ( A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) <-> A. c e. B A. d e. B ( ( X .(x) b ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( b .o. d ) ) ) )
+47::oveq2                  |- ( b = Y -> ( X .(x) b ) = ( X .(x) Y ) )
+48:47:oveq1d              |- ( b = Y -> ( ( X .(x) b ) .o. ( c .(x) d ) ) = ( ( X .(x) Y ) .o. ( c .(x) d ) ) )
+49::oveq1                  |- ( b = Y -> ( b .o. d ) = ( Y .o. d ) )
+50:49:oveq2d              |- ( b = Y -> ( ( X .o. c ) .(x) ( b .o. d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) )
+51:48,50:eqeq12d         |- ( b = Y -> ( ( ( X .(x) b ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( b .o. d ) ) <-> ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) ) )
+52:51:2ralbidv          |- ( b = Y -> ( A. c e. B A. d e. B ( ( X .(x) b ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( b .o. d ) ) <-> A. c e. B A. d e. B ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) ) )
+53::eqidd               |- ( ( ph /\ a = X ) -> B = B )
+54:46,52,7,53,8:rspc2vd
+                       |- ( ph -> ( A. a e. B A. b e. B A. c e. B A. d e. B ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) -> A. c e. B A. d e. B ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) ) )
+55:6,54:mpd           |- ( ph -> A. c e. B A. d e. B ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) )
+56::oveq1                |- ( c = I -> ( c .(x) d ) = ( I .(x) d ) )
+57:56:oveq2d            |- ( c = I -> ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .(x) Y ) .o. ( I .(x) d ) ) )
+58::oveq2                |- ( c = I -> ( X .o. c ) = ( X .o. I ) )
+59:58:oveq1d            |- ( c = I -> ( ( X .o. c ) .(x) ( Y .o. d ) ) = ( ( X .o. I ) .(x) ( Y .o. d ) ) )
+60:57,59:eqeq12d       |- ( c = I -> ( ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) <-> ( ( X .(x) Y ) .o. ( I .(x) d ) ) = ( ( X .o. I ) .(x) ( Y .o. d ) ) ) )
+61::oveq2                |- ( d = Z -> ( I .(x) d ) = ( I .(x) Z ) )
+62:61:oveq2d            |- ( d = Z -> ( ( X .(x) Y ) .o. ( I .(x) d ) ) = ( ( X .(x) Y ) .o. ( I .(x) Z ) ) )
+63::oveq2                |- ( d = Z -> ( Y .o. d ) = ( Y .o. Z ) )
+64:63:oveq2d            |- ( d = Z -> ( ( X .o. I ) .(x) ( Y .o. d ) ) = ( ( X .o. I ) .(x) ( Y .o. Z ) ) )
+65:62,64:eqeq12d       |- ( d = Z -> ( ( ( X .(x) Y ) .o. ( I .(x) d ) ) = ( ( X .o. I ) .(x) ( Y .o. d ) ) <-> ( ( X .(x) Y ) .o. ( I .(x) Z ) ) = ( ( X .o. I ) .(x) ( Y .o. Z ) ) ) )
+66::eqidd              |- ( ( ph /\ c = I ) -> B = B )
+67:5:simprd            |- ( ph -> I e. B )
+68:60,65,67,66,9:rspc2vd
+                      |- ( ph -> ( A. c e. B A. d e. B ( ( X .(x) Y ) .o. ( c .(x) d ) ) = ( ( X .o. c ) .(x) ( Y .o. d ) ) -> ( ( X .(x) Y ) .o. ( I .(x) Z ) ) = ( ( X .o. I ) .(x) ( Y .o. Z ) ) ) )
+69:55,68:mpd         |- ( ph -> ( ( X .(x) Y ) .o. ( I .(x) Z ) ) = ( ( X .o. I ) .(x) ( Y .o. Z ) ) )
+70:40,69:eqtr3d     |- ( ph -> ( ( X .o. Y ) .o. Z ) = ( ( X .o. I ) .(x) ( Y .o. Z ) ) )
+qed:36,70,37:3eqtr4d
+                   |- ( ph -> ( ( X .o. Y ) .o. Z ) = ( X .o. ( Y .o. Z ) ) )
+
+$= ( co eckmannhiltonlem1 oveq2d wceq cv wa oveq1 eqeq12d oveq2 anbi12d rspcdva
+   id simpld eqtr3d oveq1d eckmannhiltonlem2 eqcomd oveq12d wral 2ralbidv eqidd
+   simprd rspc2vd mpd wcel eleq1d 3eqtr4d ) AFEHUCZGIHUCZCUCZFVKCUCFGHUCZIHUCZF
+   VKHUCAVJFVKCAFDHUCZVJFADEFHABCDEHJKLMNOPQRSUDUEAVOFUFZDFHUCZFUFZAJUGZDHUCZVS
+   UFZDVSHUCZVSUFZUHVPVRUHJBFVSFUFZWAVPWCVRWDVTVOVSFVSFDHUIWDUNZUJWDWBVQVSFVSFD
+   HUKWEUJULPTUMUOUPUQAFGCUCZEICUCZHUCZVNVLAWFVMWGIHAVMWFABCDEFGHJKLMNOPQRSTUAU
+   RUSAIECUCZIUFZWGIUFZAVSECUCZVSUFZEVSCUCZVSUFZUHWJWKUHJBIVSIUFZWMWJWOWKWPWLWI
+   VSIVSIECUIWPUNZUJWPWNWGVSIVSIECUKWQUJULQUBUMVDUTAWFLUGZMUGZCUCZHUCZFWRHUCZGW
+   SHUCZCUCZUFZMBVALBVAZWHVLUFZAVSKUGZCUCZWTHUCZVSWRHUCZXHWSHUCZCUCZUFZMBVALBVA
+   ZKBVAJBVAXFSAXFFXHCUCZWTHUCZXBXLCUCZUFZMBVALBVAXOJKFGBBBWDXNXSLMBBWDXJXQXMXR
+   WDXIXPWTHVSFXHCUIUQWDXKXBXLCVSFWRHUIUQUJVBXHGUFZXSXELMBBXTXQXAXRXDXTXPWFWTHX
+   HGFCUKUQXTXLXCXBCXHGWSHUIUEUJVBTAWDUHBVCUAVEVFAXGWFEWSCUCZHUCZVJXCCUCZUFXELM
+   EIBBBWREUFZXAYBXDYCYDWTYAWFHWREWSCUIUEYDXBVJXCCWREFHUKUQUJWSIUFZYBWHYCVLYEYA
+   WGWFHWSIECUKUEYEXCVKVJCWSIGHUKUEUJADBVGEBVGRVDAYDUHBVCUBVEVFUPABCDEFVKHJKLMN
+   OPQRSTAVSXHHUCZBVGZKBVAJBVAVKBVGZNAYHGXHHUCZBVGYGJKGIBBBVSGUFZYFYIBVSGXHHUIV
+   HXHIUFYIVKBXHIGHUKVHUAAYJUHBVCUBVEVFURVI $.
+
+$d .(x) a
+$d .(x) b
+$d .(x) c
+$d .(x) d
+$d a b
+$d a c
+$d a d
+$d a ph
+$d b c
+$d b d
+$d c d
+$d c ph
+$d .o. a
+$d .o. b
+$d .o. c
+$d .o. d
+$d B a
+$d B b
+$d B c
+$d B d
+$d E a
+$d E b
+$d E c
+$d E d
+$d I a
+$d I b
+$d I c
+$d I d
+$d X a
+$d X b
+$d X c
+$d X d
+$d Y a
+$d Y b
+$d Y c
+$d Y d
+$d Z a
+$d Z b
+$d Z c
+$d Z d
