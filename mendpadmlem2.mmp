@@ -1,0 +1,77 @@
+$theorem mendpadmlem2
+
+* Lemma for mendpadm. Multiplication by ` X ` from the left is surjective.
+
+h1::mendpadm.a          |- B = ( Base ` M )
+h2::mendpadm.b          |- .o. = ( +g ` M )
+h3::mendpadm.c       |- ( ph -> B =/= (/) )
+h4::mendpadm.d          |- ( ph -> M e. Mgm )
+h5::mendpadm.e           |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadmlem1.1       |- ( ph -> Y e. B )
+h7::mendpadmlem2.1   |- ( ph -> X e. B )
+8:1,2,3,4,5,7:mendpadmlem1
+                    |- ( ph -> E. x e. B E. y e. B ( x .o. y ) = X )
+9:5:r19.21bi            |- ( ( ph /\ x e. B ) -> A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+10:9:r19.21bi          |- ( ( ( ph /\ x e. B ) /\ y e. B ) -> A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+11::oveq1                 |- ( z = Y -> ( z .o. y ) = ( Y .o. y ) )
+12:11:oveq2d             |- ( z = Y -> ( x .o. ( z .o. y ) ) = ( x .o. ( Y .o. y ) ) )
+13:12:oveq2d            |- ( z = Y -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( x .o. y ) .o. ( x .o. ( Y .o. y ) ) ) )
+14::id                  |- ( z = Y -> z = Y )
+15:13,14:eqeq12d       |- ( z = Y -> ( ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( ( x .o. y ) .o. ( x .o. ( Y .o. y ) ) ) = Y ) )
+16:6:ad2antrr           |- ( ( ( ph /\ x e. B ) /\ y e. B ) -> Y e. B )
+17:15,10,16:rspcdva
+                      |- ( ( ( ph /\ x e. B ) /\ y e. B ) -> ( ( x .o. y ) .o. ( x .o. ( Y .o. y ) ) ) = Y )
+18:1,2:mgmcl          |- ( ( M e. Mgm /\ x e. B /\ ( Y .o. y ) e. B ) -> ( x .o. ( Y .o. y ) ) e. B )
+19:4:ad3antrrr         |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> M e. Mgm )
+20::simpllr           |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> x e. B )
+21:16:adantr           |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> Y e. B )
+22::simplr             |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> y e. B )
+23:1,2:mgmcl           |- ( ( M e. Mgm /\ Y e. B /\ y e. B ) -> ( Y .o. y ) e. B )
+24:19,21,22,23:syl3anc
+                      |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> ( Y .o. y ) e. B )
+25:19,20,24,18:syl3anc
+                     |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> ( x .o. ( Y .o. y ) ) e. B )
+26::simplr              |- ( ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) /\ t = ( x .o. ( Y .o. y ) ) ) -> ( x .o. y ) = X )
+27:26:eqcomd           |- ( ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) /\ t = ( x .o. ( Y .o. y ) ) ) -> X = ( x .o. y ) )
+28::simpr              |- ( ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) /\ t = ( x .o. ( Y .o. y ) ) ) -> t = ( x .o. ( Y .o. y ) ) )
+29:27,28:oveq12d      |- ( ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) /\ t = ( x .o. ( Y .o. y ) ) ) -> ( X .o. t ) = ( ( x .o. y ) .o. ( x .o. ( Y .o. y ) ) ) )
+30:29:eqeq1d         |- ( ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) /\ t = ( x .o. ( Y .o. y ) ) ) -> ( ( X .o. t ) = Y <-> ( ( x .o. y ) .o. ( x .o. ( Y .o. y ) ) ) = Y ) )
+31:17:adantr         |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> ( ( x .o. y ) .o. ( x .o. ( Y .o. y ) ) ) = Y )
+32:25,30,31:rspcedvd
+                    |- ( ( ( ( ph /\ x e. B ) /\ y e. B ) /\ ( x .o. y ) = X ) -> E. t e. B ( X .o. t ) = Y )
+qed:32,8:r19.29vva |- ( ph -> E. t e. B ( X .o. t ) = Y )
+
+$= ( co wceq wcel cv wrex cmgm ad3antrrr simpllr ad2antrr adantr simplr syl3anc
+   mgmcl eqcomd simpr oveq12d eqeq1d oveq1 oveq2d eqeq12d wral r19.21bi rspcdva
+   wa id rspcedvd mendpadmlem1 r19.29vva ) ABUAZCUAZJRZHSZHEUAZJRZISZEFUBBCFFAV
+   FFTZVAZVGFTZVAZVIVAZVLVHVFIVGJRZJRZJRZISZEVSFVQGUCTZVMVRFTZVSFTAWBVMVOVINUDZ
+   AVMVOVIUEVQWBIFTZVOWCWDVPWEVIAWEVMVOPUFZUGVNVOVIUHFGIVGJKLUJUIFGVFVRJKLUJUIV
+   QVJVSSZVAZVKVTIWHHVHVJVSJWHVHHVPVIWGUHUKVQWGULUMUNVPWAVIVPVHVFDUAZVGJRZJRZJR
+   ZWISZWADFIWIISZWLVTWIIWNWKVSVHJWNWJVRVFJWIIVGJUOUPUPWNVBUQVNWMDFURZCFAWOCFUR
+   BFOUSUSWFUTUGVCABCDFGHJKLMNOQVDVE $.
+
+$d .o. x
+$d .o. z
+$d .o. y
+$d x z
+$d x y
+$d B x
+$d B y
+$d B z
+$d y z
+$d ph x
+$d ph z
+$d X x
+$d X z
+$d X y
+$d t x
+$d t y
+$d Y x
+$d Y y
+$d ph y
+$d Y z
+$d B t
+$d ph t
+$d .o. t
+$d X t
+$d Y t
