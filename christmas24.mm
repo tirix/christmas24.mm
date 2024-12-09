@@ -210,15 +210,26 @@ $)
   $}
 
   ${
-  $( Lemma for mendpadm. Multiplication is surjective. $)
-    $d x B M .o. $.  $d y B M .o. $.  $d z B M .o. $.
+    $d .o. x z $. $d .o. y $. $d B x y z $. $d Z x z $. $d Z y $. $d ph x z $.
     mendpadm.a $e |- B = ( Base ` M ) $.
     mendpadm.b $e |- .o. = ( +g ` M ) $.
     mendpadm.c $e |- ( ph -> B =/= (/) ) $.
     mendpadm.d $e |- ( ph -> M e. Mgm ) $.
-    mendpadm.e $e |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z ) $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
-    mendpadmlem1 $p |- ( ph -> A. z e. B E. x e. B E. y e. B ( x .o. y ) = z ) $= ? $.
+    mendpadm.e $e |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. (
+       x .o. ( z .o. y ) ) ) = z ) $.
+   ${
+     mendpadmlem1.1 $e |- ( ph -> Z e. B ) $.
+     $( Lemma for mendpadm. Multiplication is surjective. $)
+     mendpadmlem1 $p |- ( ph -> E. x e. B E. y e. B ( x .o. y ) = Z ) $=
+      ( co wcel wceq oveq1 wral eqeq1d wrex cmgm syl3anc oveq2d eqeq12d oveq12d
+      cv mgmcl id ralbidv oveq2 wa eqidd rspc2vd mpd rspcdva rspc2ev ) AHHGOZEP
+      ZHURGOZEPZURUTGOZHQZBUGZCUGZGOZHQZCEUABEUAAFUBPZHEPZVIUSLNNEFHHGIJUHUCZAV
+      HVIUSVALNVJEFHURGIJUHUCAURHDUGZHGOZGOZGOZVKQZVCDEHVKHQZVNVBVKHVPVMUTURGVP
+      VLURHGVKHHGRUDUDVPUIUEAVFVDVKVEGOZGOZGOZVKQZDESZCESBESVODESZMAWBHVEGOZHVQ
+      GOZGOZVKQZDESWABCHHEEEVDHQZVTWFDEWGVSWEVKWGVFWCVRWDGVDHVEGRVDHVQGRUFTUJVE
+      HQZWFVODEWHWEVNVKWHWCURWDVMGVEHHGUKWHVQVLHGVEHVKGUKUDUFTUJNAWGULEUMNUNUON
+      UPVGVCURVEGOZHQBCURUTEEVDURQVFWIHVDURVEGRTVEUTQWIVBHVEUTURGUKTUQUC $.
+    $}
 
     $( Lemma for mendpadm.  Multiplication by ` x ` from the left is
        surjective. $)

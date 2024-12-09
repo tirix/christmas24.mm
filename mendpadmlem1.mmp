@@ -1,0 +1,66 @@
+$theorem mendpadmlem1
+
+* Lemma for mendpadm. Multiplication is surjective.
+
+h1::mendpadm.a         |- B = ( Base ` M )
+h2::mendpadm.b         |- .o. = ( +g ` M )
+h3::mendpadm.c     |- ( ph -> B =/= (/) )
+h4::mendpadm.d        |- ( ph -> M e. Mgm )
+h5::mendpadm.e        |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadmlem1.1     |- ( ph -> Z e. B )
+7:1,2:mgmcl           |- ( ( M e. Mgm /\ Z e. B /\ Z e. B ) -> ( Z .o. Z ) e. B )
+8:4,6,6,7:syl3anc    |- ( ph -> ( Z .o. Z ) e. B )
+9:1,2:mgmcl          |- ( ( M e. Mgm /\ Z e. B /\ ( Z .o. Z ) e. B ) -> ( Z .o. ( Z .o. Z ) ) e. B )
+10:4,6,8,9:syl3anc  |- ( ph -> ( Z .o. ( Z .o. Z ) ) e. B )
+11::oveq1             |- ( x = ( Z .o. Z ) -> ( x .o. y ) = ( ( Z .o. Z ) .o. y ) )
+12:11:eqeq1d         |- ( x = ( Z .o. Z ) -> ( ( x .o. y ) = Z <-> ( ( Z .o. Z ) .o. y ) = Z ) )
+13::oveq2             |- ( y = ( Z .o. ( Z .o. Z ) ) -> ( ( Z .o. Z ) .o. y ) = ( ( Z .o. Z ) .o. ( Z .o. ( Z .o. Z ) ) ) )
+14:13:eqeq1d         |- ( y = ( Z .o. ( Z .o. Z ) ) -> ( ( ( Z .o. Z ) .o. y ) = Z <-> ( ( Z .o. Z ) .o. ( Z .o. ( Z .o. Z ) ) ) = Z ) )
+15:12,14:rspc2ev    |- ( ( ( Z .o. Z ) e. B /\ ( Z .o. ( Z .o. Z ) ) e. B /\ ( ( Z .o. Z ) .o. ( Z .o. ( Z .o. Z ) ) ) = Z ) -> E. x e. B E. y e. B ( x .o. y ) = Z )
+16::oveq1                 |- ( x = Z -> ( x .o. y ) = ( Z .o. y ) )
+17::oveq1                 |- ( x = Z -> ( x .o. ( z .o. y ) ) = ( Z .o. ( z .o. y ) ) )
+18:16,17:oveq12d         |- ( x = Z -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( Z .o. y ) .o. ( Z .o. ( z .o. y ) ) ) )
+19:18:eqeq1d            |- ( x = Z -> ( ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( ( Z .o. y ) .o. ( Z .o. ( z .o. y ) ) ) = z ) )
+20:19:ralbidv          |- ( x = Z -> ( A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> A. z e. B ( ( Z .o. y ) .o. ( Z .o. ( z .o. y ) ) ) = z ) )
+21::oveq2                 |- ( y = Z -> ( Z .o. y ) = ( Z .o. Z ) )
+22::oveq2                  |- ( y = Z -> ( z .o. y ) = ( z .o. Z ) )
+23:22:oveq2d              |- ( y = Z -> ( Z .o. ( z .o. y ) ) = ( Z .o. ( z .o. Z ) ) )
+24:21,23:oveq12d         |- ( y = Z -> ( ( Z .o. y ) .o. ( Z .o. ( z .o. y ) ) ) = ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) )
+25:24:eqeq1d            |- ( y = Z -> ( ( ( Z .o. y ) .o. ( Z .o. ( z .o. y ) ) ) = z <-> ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) = z ) )
+26:25:ralbidv          |- ( y = Z -> ( A. z e. B ( ( Z .o. y ) .o. ( Z .o. ( z .o. y ) ) ) = z <-> A. z e. B ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) = z ) )
+27::oveq1               |- ( z = Z -> ( z .o. Z ) = ( Z .o. Z ) )
+28:27:oveq2d           |- ( z = Z -> ( Z .o. ( z .o. Z ) ) = ( Z .o. ( Z .o. Z ) ) )
+29:28:oveq2d          |- ( z = Z -> ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) = ( ( Z .o. Z ) .o. ( Z .o. ( Z .o. Z ) ) ) )
+30::id                |- ( z = Z -> z = Z )
+31:29,30:eqeq12d     |- ( z = Z -> ( ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) = z <-> ( ( Z .o. Z ) .o. ( Z .o. ( Z .o. Z ) ) ) = Z ) )
+32::eqidd              |- ( ( ph /\ x = Z ) -> B = B )
+33:20,26,6,32,6:rspc2vd
+                      |- ( ph -> ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> A. z e. B ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) = z ) )
+34:5,33:mpd          |- ( ph -> A. z e. B ( ( Z .o. Z ) .o. ( Z .o. ( z .o. Z ) ) ) = z )
+35:31,34,6:rspcdva  |- ( ph -> ( ( Z .o. Z ) .o. ( Z .o. ( Z .o. Z ) ) ) = Z )
+qed:8,10,35,15:syl3anc
+                   |- ( ph -> E. x e. B E. y e. B ( x .o. y ) = Z )
+
+$= ( co wcel wceq oveq1 wral eqeq1d cv wrex cmgm syl3anc oveq2d eqeq12d oveq12d
+   mgmcl id ralbidv oveq2 wa eqidd rspc2vd mpd rspcdva rspc2ev ) AHHGOZEPZHURGO
+   ZEPZURUTGOZHQZBUAZCUAZGOZHQZCEUBBEUBAFUCPZHEPZVIUSLNNEFHHGIJUHUDZAVHVIUSVALN
+   VJEFHURGIJUHUDAURHDUAZHGOZGOZGOZVKQZVCDEHVKHQZVNVBVKHVPVMUTURGVPVLURHGVKHHGR
+   UEUEVPUIUFAVFVDVKVEGOZGOZGOZVKQZDESZCESBESVODESZMAWBHVEGOZHVQGOZGOZVKQZDESWA
+   BCHHEEEVDHQZVTWFDEWGVSWEVKWGVFWCVRWDGVDHVEGRVDHVQGRUGTUJVEHQZWFVODEWHWEVNVKW
+   HWCURWDVMGVEHHGUKWHVQVLHGVEHVKGUKUEUGTUJNAWGULEUMNUNUONUPVGVCURVEGOZHQBCURUT
+   EEVDURQVFWIHVDURVEGRTVEUTQWIVBHVEUTURGUKTUQUD $.
+
+$d ph z
+$d x y
+$d B x
+$d B y
+$d x z
+$d .o. x
+$d .o. y
+$d y z
+$d ph x
+$d Z x
+$d Z y
+$d B z
+$d Z z
+$d .o. z
