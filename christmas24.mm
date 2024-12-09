@@ -182,13 +182,31 @@ $)
       VDUBVEVFURVI $.
   $}
 
+  $d .(x) a b c d e f $. $d .o. a b c d e f g $. $d B a b c d e f g $.
+  $d E a b c d $. $d I a b c d $. $d a c d e f g ph $.
   $( The Eckmann-Hilton argument. If for two unital magmas, represented here by the operation ` .o. ` with unit ` E `
      and the operation ` .(x) ` with unit ` I ` , on the same base set ` B ` an identity ` ( ( a .(x) b ) .o. ( c .(x) d ) ) = ( ( a .o. c ) .(x) ( b .o. d ) ) `
      holds, then these magmas coincide and the operation is associative and commutative. $)
-    $d a B E I .o. .(x) $.  $d b B E I .o. .(x) $.  $d c B E I .o. .(x) $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
-    eckmannhilton $p |- ( ph -> ( E = I /\ A. a e. B A. b e. B ( ( a .o. b ) = ( a .(x) b ) /\ ( a .o. b ) = ( b .o. a ) ) /\
-                        A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. c ) = ( a .o. ( b .o. c ) ) ) ) $= ? $.
+    eckmannhilton $p |- ( ph -> ( E = I /\ A. a e. B A. b e. B ( ( a .o. b ) =
+       ( a .(x) b ) /\ ( a .o. b ) = ( b .o. a ) ) /\ A. a e. B A. b e. B A. c
+       e. B ( ( a .o. b ) .o. c ) = ( a .o. ( b .o. c ) ) ) ) $=
+      ( wceq co wral adantr ve vf vg cv wa eckmannhiltonlem1 wcel simprl simprr
+      eckmannhiltonlem2 eckmannhiltonlem3 oveq1 eqeq12d oveq2 anbi12d cbvral2vw
+      jca ralrimivva sylibr w3a 3adantr3 simpr3 eckmannhiltonlem4 oveq1d oveq2d
+      ralrimivvva id cbvral3vw 3jca ) ADEQGUDZHUDZFRZVJVKCRZQZVLVKVJFRZQZUEZHBS
+      GBSZVLIUDZFRZVJVKVSFRZFRZQZIBSHBSGBSZABCDEFGHIJKLMNOPUFAUAUDZUBUDZFRZWEWF
+      CRZQZWGWFWEFRZQZUEZUBBSUABSVRAWLUAUBBBAWEBUGZWFBUGZUEZUEZWIWKWPBCDEWEWFFG
+      HIJAVLBUGHBSGBSZWOKTZAVMBUGHBSGBSZWOLTZAVJDFRVJQDVJFRVJQUEGBSZWOMTZAVJECR
+      VJQEVJCRVJQUEGBSZWONTZADBUGEBUGUEZWOOTZAVMVSJUDZCRFRVJVSFRVKXGFRCRQJBSIBS
+      HBSGBSZWOPTZAWMWNUHZAWMWNUIZUJWPBCDEWEWFFGHIJWRWTXBXDXFXIXJXKUKUQURVQWLWE
+      VKFRZWEVKCRZQZXLVKWEFRZQZUEGHUAUBBBVJWEQZVNXNVPXPXQVLXLVMXMVJWEVKFULZVJWE
+      VKCULUMXQVLXLVOXOXRVJWEVKFUNUMUOVKWFQZXNWIXPWKXSXLWGXMWHVKWFWEFUNZVKWFWEC
+      UNUMXSXLWGXOWJXTVKWFWEFULUMUOUPUSAWGUCUDZFRZWEWFYAFRZFRZQZUCBSUBBSUABSWDA
+      YEUAUBUCBBBAWMWNYABUGZUTZUEBCDEWEWFFYAGHIJAWQYGKTAWSYGLTAXAYGMTAXCYGNTAXE
+      YGOTAXHYGPTAWMWNWMYFXJVAAWMWNWNYFXKVAAWMWNYFVBVCVFWCYEXLVSFRZWEWAFRZQWGVS
+      FRZWEWFVSFRZFRZQGHIUAUBUCBBBXQVTYHWBYIXQVLXLVSFXRVDVJWEWAFULUMXSYHYJYIYLX
+      SXLWGVSFXTVDXSWAYKWEFVKWFVSFULVEUMVSYAQZYJYBYLYDYMVSYAWGFYMVGVEYMYKYCWEFV
+      SYAWFFUNVEUMVHUSVI $.
   $}
 
   ${
