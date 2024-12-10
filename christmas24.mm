@@ -217,20 +217,20 @@ $)
     mendpadm.e $e |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. (
        x .o. ( z .o. y ) ) ) = z ) $.
    ${
-     $d .o. t x y $. $d .o. x y z $. $d B t $. $d B x y z $. $d X t $.
-     $d X x y z $. $d Y t $. $d Y x y z $. $d ph t $. $d ph x y z $.
-
+     $d .o. a b $.  $d .o. x y z t $.  $d B a b $.  $d B x y z t $.
+     $d X x y z t $.  $d Y a b $.  $d Y x y z t $.  $d ph x y z t $.
      mendpadmlem1.1 $e |- ( ph -> Y e. B ) $.
      $( Lemma for mendpadm. Multiplication is surjective. $)
-     mendpadmlem1 $p |- ( ph -> E. x e. B E. y e. B ( x .o. y ) = Y ) $=
-      ( co wcel wceq oveq1 wral eqeq1d wrex cmgm syl3anc oveq2d eqeq12d oveq12d
-      cv mgmcl id ralbidv oveq2 wa eqidd rspc2vd mpd rspcdva rspc2ev ) AGGHOZEP
-      ZGURHOZEPZURUTHOZGQZBUGZCUGZHOZGQZCEUABEUAAFUBPZGEPZVIUSLNNEFGGHIJUHUCZAV
-      HVIUSVALNVJEFGURHIJUHUCAURGDUGZGHOZHOZHOZVKQZVCDEGVKGQZVNVBVKGVPVMUTURHVP
-      VLURGHVKGGHRUDUDVPUIUEAVFVDVKVEHOZHOZHOZVKQZDESZCESBESVODESZMAWBGVEHOZGVQ
-      HOZHOZVKQZDESWABCGGEEEVDGQZVTWFDEWGVSWEVKWGVFWCVRWDHVDGVEHRVDGVQHRUFTUJVE
-      GQZWFVODEWHWEVNVKWHWCURWDVMHVEGGHUKWHVQVLGHVEGVKHUKUDUFTUJNAWGULEUMNUNUON
-      UPVGVCURVEHOZGQBCURUTEEVDURQVFWIGVDURVEHRTVEUTQWIVBGVEUTURHUKTUQUC $.
+     mendpadmlem1 $p |- ( ph -> E. a e. B E. b e. B ( a .o. b ) = Y ) $=
+      ( co wceq cv wral wcel wrex mgmcl syl3anc oveq1 oveq2d id eqeq12d oveq12d
+      cmgm eqeq1d ralbidv oveq2 wa eqidd rspc2vd mpd rspcdva rspc2ev ) AGGHQZEU
+      AZGUTHQZEUAZUTVBHQZGRZISZJSZHQZGRZJEUBIEUBAFUJUAZGEUAZVKVANPPEFGGHKLUCUDZ
+      AVJVKVAVCNPVLEFGUTHKLUCUDAUTGDSZGHQZHQZHQZVMRZVEDEGVMGRZVPVDVMGVRVOVBUTHV
+      RVNUTGHVMGGHUEUFUFVRUGUHABSZCSZHQZVSVMVTHQZHQZHQZVMRZDETZCETBETVQDETZOAWG
+      GVTHQZGWBHQZHQZVMRZDETWFBCGGEEEVSGRZWEWKDEWLWDWJVMWLWAWHWCWIHVSGVTHUEVSGW
+      BHUEUIUKULVTGRZWKVQDEWMWJVPVMWMWHUTWIVOHVTGGHUMWMWBVNGHVTGVMHUMUFUIUKULPA
+      WLUNEUOPUPUQPURVIVEUTVGHQZGRIJUTVBEEVFUTRVHWNGVFUTVGHUEUKVGVBRWNVDGVGVBUT
+      HUMUKUSUD $.
 
     mendpadmlem2.1 $e |- ( ph -> X e. B ) $.
     $( Lemma for mendpadm. Multiplication by ` X ` from the left is surjective.
@@ -243,8 +243,7 @@ $)
       WBVMVOVINUCZAVMVOVIUDVQWBIFTZVOWCWDVPWEVIAWEVMVOPUEZUFVNVOVIUGFGIVGJKLUKU
       HFGVFVRJKLUKUHVQVJVSSZUJZVKVTIWHHVHVJVSJWHVHHVPVIWGUGULVQWGUMUNUOVPWAVIVP
       VHVFDUIZVGJRZJRZJRZWISZWADFIWIISZWLVTWIIWNWKVSVHJWNWJVRVFJWIIVGJUPUQUQWNV
-      AURVNWMDFUSZCFAWOCFUSBFOVBVBWFUTUFVCABCDFGHJKLMNOQVDVE $.
-    $}
+      AURVNWMDFUSZCFAWOCFUSBFOVBVBWFUTUFVCABCDFGHJBCKLMNOQVDVE $.
 
     $( Lemma for mendpadm.  Multiplication by ` y ` from the right is
        surjective. $)
