@@ -245,9 +245,27 @@ $)
       VHVFDUIZVGJRZJRZJRZWISZWADFIWIISZWLVTWIIWNWKVSVHJWNWJVRVFJWIIVGJUPUQUQWNV
       AURVNWMDFUSZCFAWOCFUSBFOVBVBWFUTUFVCABCDFGHJBCKLMNOQVDVE $.
 
-    $( Lemma for mendpadm.  Multiplication by ` y ` from the right is
+    $d .o. a b c t $.  $d .o. a b c x y z $.  $d B a b c x y z $. $d B b c t $.
+    $d X a b c x y z $.  $d X b c t $.  $d Y a b c x y z $.  $d Y b c t $.
+    $d a b c ph x y z $.  $d b c ph t $.
+    $( Lemma for mendpadm. Multiplication by ` X ` from the right is
        surjective. $)
-    mendpadmlem3 $p |- ( ph -> A. z e. B A. y e. B E. x e. B ( x .o. y ) = z ) $= ? $.
+    mendpadmlem3 $p |- ( ph -> E. t e. B ( t .o. X ) = Y ) $=
+      ( cv co wceq va vb vc wrex wcel wa cmgm ad3antrrr ad2antrr simp-5r simplr
+      mgmcl syl3anc oveq1 eqeq1d adantl simpr oveq2d simpllr eqtrd wral oveq12d
+      wb w3a oveq2 eqeq12d rspc3v imp syl31anc eqtr3d rspcedvd wne mendpadmlem2
+      id c0 r19.29a mendpadmlem1 r19.29vva ) AUARZUBRZJSZHTZERZHJSZITZEFUDZUAUB
+      FFAVSFUEZUFZVTFUEZUFZWBUFZIUCRZJSZVTTZWFUCFWKWLFUEZUFZWNUFZWEVSWLJSZHJSZI
+      TZEWRFWQGUGUEZWGWOWRFUEWKXAWOWNAXAWGWIWBNUHZUIAWGWIWBWOWNUJZWKWOWNUKZFGVS
+      WLJKLULUMWCWRTZWEWTVCWQXEWDWSIWCWRHJUNUOUPWQWRVSWMJSZJSZWSIWQXFHWRJWQXFWA
+      HWQWMVTVSJWPWNUQURWJWBWOWNUSUTURWQWGWOIFUEZBRZCRZJSZXIDRZXJJSZJSZJSZXLTZD
+      FVACFVABFVAZXGITZXCXDWKXHWOWNAXHWGWIWBPUHZUIWKXQWOWNAXQWGWIWBOUHZUIWGWOXH
+      VDXQXRXPXRVSXJJSZVSXMJSZJSZXLTWRVSXLWLJSZJSZJSZXLTBCDVSWLIFFFXIVSTZXOYCXL
+      YGXKYAXNYBJXIVSXJJUNXIVSXMJUNVBUOXJWLTZYCYFXLYHYAWRYBYEJXJWLVSJVEYHXMYDVS
+      JXJWLXLJVEURVBUOXLITZYFXGXLIYIYEXFWRJYIYDWMVSJXLIWLJUNURURYIVNVFVGVHVIVJV
+      KWKBCDUCFGIVTJKLAFVOVLWGWIWBMUHXBXTWHWIWBUKXSVMVPABCDFGHJUAUBKLMNOQVQVR
+      $.
+    $}
 
     $( Lemma for mendpadm.  The identity ` x .o. ( y .o. x ) = y ` holds. $)
     mendpadmlem4 $p |- ( ph -> A. x e. B A. y e. B ( x .o. ( y .o. x ) ) = y ) $= ? $.
