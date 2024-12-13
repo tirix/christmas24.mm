@@ -265,10 +265,18 @@ $)
       JXJWLXLJVEURVBUOXLITZYFXGXLIYIYEXFWRJYIYDWMVSJXLIWLJUNURURYIVNVFVGVHVIVJV
       KWKBCDUCFGIVTJKLAFVOVLWGWIWBMUHXBXTWHWIWBUKXSVMVPABCDFGHJUAUBKLMNOQVQVR
       $.
-    $}
 
-    $( Lemma for mendpadm.  The identity ` x .o. ( y .o. x ) = y ` holds. $)
-    mendpadmlem4 $p |- ( ph -> A. x e. B A. y e. B ( x .o. ( y .o. x ) ) = y ) $= ? $.
+    $( Lemma for mendpadm. The identity ` X .o. ( Y .o. X ) = Y ` holds. $)
+    mendpadmlem4 $p |- ( ph -> ( X .o. ( Y .o. X ) ) = Y ) $=
+      ( cv co wceq oveq2d vt wcel simpr oveq12d wral ad2antrr simplr w3a eqeq1d
+      wa oveq1 oveq2 id eqeq12d rspc3v imp syl31anc eqtr3d mendpadmlem2 r19.29a
+      ) AHUAQZIRZGSZGHGIRZIRZHSUAEAVAEUBZUJZVCUJZVBHVBIRZIRZVEHVHVBGVIVDIVGVCUC
+      ZVHVBGHIVKTUDVHHEUBZVFVLBQZCQZIRZVMDQZVNIRZIRZIRZVPSZDEUECEUEBEUEZVJHSZAV
+      LVFVCOUFZAVFVCUGWCAWAVFVCNUFVLVFVLUHWAWBVTWBHVNIRZHVQIRZIRZVPSVBHVPVAIRZI
+      RZIRZVPSBCDHVAHEEEVMHSZVSWFVPWJVOWDVRWEIVMHVNIUKVMHVQIUKUDUIVNVASZWFWIVPW
+      KWDVBWEWHIVNVAHIULWKVQWGHIVNVAVPIULTUDUIVPHSZWIVJVPHWLWHVIVBIWLWGVBHIVPHV
+      AIUKTTWLUMUNUOUPUQURABCDUAEFHGIJKLMNPOUSUT $.
+    $}
 
     $( Lemma for mendpadm.  Multiplication of ` x ` by ` x .o. x ` gives
        ` x ` . $)
