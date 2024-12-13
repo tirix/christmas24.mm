@@ -276,11 +276,21 @@ $)
       RZIRZVPSBCDHVAHEEEVMHSZVSWFVPWJVOWDVRWEIVMHVNIUKVMHVQIUKUDUIVNVASZWFWIVPW
       KWDVBWEWHIVNVAHIULWKVQWGHIVNVAVPIULTUDUIVPHSZWIVJVPHWLWHVIVBIWLWGVBHIVPHV
       AIUKTTWLUMUNUOUPUQURABCDUAEFHGIJKLMNPOUSUT $.
-    $}
+   $}
 
+   ${
+    $d .o. x y z $. $d B x y z $. $d X x y z $. $d ph x y z $.
+    mendpadmlem5.1 $e |- ( ph -> X e. B ) $.
     $( Lemma for mendpadm.  Multiplication of ` x ` by ` x .o. x ` gives
        ` x ` . $)
-    mendpadmlem5 $p |- ( ph -> A. x e. B ( ( x .o. ( x .o. x ) ) = x /\ ( ( x .o. x ) .o. x ) = x ) ) $= ? $.
+    mendpadmlem5 $p |- ( ph -> ( ( X .o. X ) .o. X ) = X ) $=
+      ( co oveq2d cv wceq wral oveq1 mendpadmlem4 wcel w3a oveq12d eqidd eqeq1d
+      eqeq12d oveq2 id rspc3v imp syl31anc eqtr3d ) AGGHOZGUNHOZHOZUNGHOGAUOGUN
+      HABCDEFGGHIJKLMNNUAPAGEUBZUQUQBQZCQZHOZURDQZUSHOZHOZHOZVARZDESCESBESZUPGR
+      ZNNNMUQUQUQUCVFVGVEVGGUSHOZGVBHOZHOZVARUNGVAGHOZHOZHOZVARBCDGGGEEEURGRZVD
+      VJVAVAVNUTVHVCVIHURGUSHTURGVBHTUDVNVAUEUGUSGRZVJVMVAVOVHUNVIVLHUSGGHUHVOV
+      BVKGHUSGVAHUHPUDUFVAGRZVMUPVAGVPVLUOUNHVPVKUNGHVAGGHTPPVPUIUGUJUKULUM $.
+   $}
 
     $( Lemma for mendpadm.  Squares of all elements are equal to each other. $)
     mendpadmlem6 $p |- ( ph -> A. x e. B A. y e. B ( x .o. x ) = ( y .o. y ) ) $= ? $.
