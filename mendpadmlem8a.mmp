@@ -1,0 +1,94 @@
+$theorem mendpadmlem8a
+
+* Lemma for mendpadm.  Multiplying two times from the left by the same element gives the original element.
+
+h1::mendpadm.a             |- B = ( Base ` M )
+h2::mendpadm.b             |- .o. = ( +g ` M )
+h3::mendpadm.c             |- ( ph -> B =/= (/) )
+h4::mendpadm.d             |- ( ph -> M e. Mgm )
+h5::mendpadm.e             |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadm8.1       |- ( ph -> X e. B )
+h7::mendpadm8.2        |- ( ph -> Y e. B )
+8::oveq1                 |- ( x = X -> ( x .o. y ) = ( X .o. y ) )
+9::oveq1                 |- ( x = X -> ( x .o. ( z .o. y ) ) = ( X .o. ( z .o. y ) ) )
+10:8,9:oveq12d          |- ( x = X -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) )
+11:10:eqeq1d           |- ( x = X -> ( ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) = z ) )
+12::oveq2                |- ( y = ( 0g ` M ) -> ( X .o. y ) = ( X .o. ( 0g ` M ) ) )
+13::oveq2                 |- ( y = ( 0g ` M ) -> ( z .o. y ) = ( z .o. ( 0g ` M ) ) )
+14:13:oveq2d             |- ( y = ( 0g ` M ) -> ( X .o. ( z .o. y ) ) = ( X .o. ( z .o. ( 0g ` M ) ) ) )
+15:12,14:oveq12d        |- ( y = ( 0g ` M ) -> ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) = ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( z .o. ( 0g ` M ) ) ) ) )
+16:15:eqeq1d           |- ( y = ( 0g ` M ) -> ( ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) = z <-> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( z .o. ( 0g ` M ) ) ) ) = z ) )
+17::oveq1                 |- ( z = Y -> ( z .o. ( 0g ` M ) ) = ( Y .o. ( 0g ` M ) ) )
+18:17:oveq2d             |- ( z = Y -> ( X .o. ( z .o. ( 0g ` M ) ) ) = ( X .o. ( Y .o. ( 0g ` M ) ) ) )
+19:18:oveq2d            |- ( z = Y -> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( z .o. ( 0g ` M ) ) ) ) = ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( Y .o. ( 0g ` M ) ) ) ) )
+20::id                  |- ( z = Y -> z = Y )
+21:19,20:eqeq12d       |- ( z = Y -> ( ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( z .o. ( 0g ` M ) ) ) ) = z <-> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( Y .o. ( 0g ` M ) ) ) ) = Y ) )
+22:11,16,21:rspc3v    |- ( ( X e. B /\ ( 0g ` M ) e. B /\ Y e. B ) -> ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( Y .o. ( 0g ` M ) ) ) ) = Y ) )
+23:22:imp            |- ( ( ( X e. B /\ ( 0g ` M ) e. B /\ Y e. B ) /\ A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z ) -> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( Y .o. ( 0g ` M ) ) ) ) = Y )
+24:1,2,3,4,5:mendpadmlem7
+                     |- ( ph -> ( 0g ` M ) e. B )
+25:1,2,3,4,5:mendpadmlem7e
+                          |- ( ph -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+26::eqid                 |- ( 0g ` M ) = ( 0g ` M )
+27::reurex                |- ( E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> E. i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+28:25,27:syl             |- ( ph -> E. i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+29:1,26,2,28:mgmlrid
+                       |- ( ( ph /\ X e. B ) -> ( ( ( 0g ` M ) .o. X ) = X /\ ( X .o. ( 0g ` M ) ) = X ) )
+30:1,26,2,28:mgmlrid
+                        |- ( ( ph /\ Y e. B ) -> ( ( ( 0g ` M ) .o. Y ) = Y /\ ( Y .o. ( 0g ` M ) ) = Y ) )
+31:29:simprd          |- ( ( ph /\ X e. B ) -> ( X .o. ( 0g ` M ) ) = X )
+32:30:simprd           |- ( ( ph /\ Y e. B ) -> ( Y .o. ( 0g ` M ) ) = Y )
+33:6,31:mpdan        |- ( ph -> ( X .o. ( 0g ` M ) ) = X )
+34:7,32:mpdan         |- ( ph -> ( Y .o. ( 0g ` M ) ) = Y )
+35:6,24,7,5,23:syl31anc
+                    |- ( ph -> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( Y .o. ( 0g ` M ) ) ) ) = Y )
+36:34:oveq2d         |- ( ph -> ( X .o. ( Y .o. ( 0g ` M ) ) ) = ( X .o. Y ) )
+37:33,36:oveq12d    |- ( ph -> ( ( X .o. ( 0g ` M ) ) .o. ( X .o. ( Y .o. ( 0g ` M ) ) ) ) = ( X .o. ( X .o. Y ) ) )
+qed:37,35:eqtr3d   |- ( ph -> ( X .o. ( X .o. Y ) ) = Y )
+
+$= ( vt vi co wceq c0g cfv wcel wa eqid wral wreu wrex mendpadmlem7e reurex syl
+   cv mgmlrid simprd mpdan oveq2d oveq12d mendpadmlem7 w3a oveq1 eqeq1d eqeq12d
+   oveq2 id rspc3v imp syl31anc eqtr3d ) AGFUAUBZISZGHVIISZISZISZGGHISZISHAVJGV
+   LVNIAGEUCZVJGTZOAVOUDVIGISGTVPAQEIRFGVIJVIUEZKARULZQULZISVSTVSVRISVSTUDQEUFZ
+   REUGVTREUHABCDQERFIJKLMNUIVTREUJUKZUMUNUOAVKHGIAHEUCZVKHTZPAWBUDVIHISHTWCAQE
+   IRFHVIJVQKWAUMUNUOUPUQAVOVIEUCZWBBULZCULZISZWEDULZWFISZISZISZWHTZDEUFCEUFBEU
+   FZVMHTZOABCDEFIJKLMNURPNVOWDWBUSWMWNWLWNGWFISZGWIISZISZWHTVJGWHVIISZISZISZWH
+   TBCDGVIHEEEWEGTZWKWQWHXAWGWOWJWPIWEGWFIUTWEGWIIUTUQVAWFVITZWQWTWHXBWOVJWPWSI
+   WFVIGIVCXBWIWRGIWFVIWHIVCUPUQVAWHHTZWTVMWHHXCWSVLVJIXCWRVKGIWHHVIIUTUPUPXCVD
+   VBVEVFVGVH $.
+
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d X x
+$d X y
+$d X z
+$d M y
+$d M z
+$d Y z
+$d .o. z
+$d .o. x
+$d .o. y
+$d ph x
+$d ph y
+$d ph z
+$d .o. i
+$d i x
+$d i y
+$d i z
+$d i ph
+$d B i
+$d M i
+$d .o. t
+$d i t
+$d t x
+$d t y
+$d t z
+$d B t
+$d M t
+$d ph t
+$d X t
+$d Y t

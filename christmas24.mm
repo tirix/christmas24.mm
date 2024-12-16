@@ -308,30 +308,62 @@ $)
       DEFHIJKAEVAVBVNVKLSAWNVNVKMSWOWMVDTVTVETVFABCDUAEFHGIJKLMNOPVGVH $.
   $}
 
-    $d .o. i t x y z $. $d B i t u x y z $. $d M i t u $. $d X x y z $.
+    $d .o. i t u x y z $. $d B i t u x y z $. $d M i t u $. $d X x y z $.
     $d Y x y z $. $d i ph t u x y z $.
     $( Lemma for mendpadm. ` M ` has an identity element. $)
-    mendpadmlem7 $p |- ( ph -> ( 0g ` M ) e. B ) $=
-      ( vi vt cv wcel wa co wceq wral vu wex c0g cfv c0 wne sylib eqid grpidval
-      n0 crio df-riota wreu wb cmgm adantr simpr mgmcl syl3anc oveq2 id eqeq12d
-      oveq1 anbi12d adantl rspcdv simpld ad3antrrr ad2antrr simplr mendpadmlem6
-      cio imp eqtr3d ad4antr eqtrd oveq1d mendpadmlem5 mendpadmlem4 jca impbida
-      oveq2d ralrimiva reu6i syl2anc riotacl syl eqeltrrid eqeltrid exlimdv mpd
-      ex ) AUAOZEPZUAUBZFUCUDZEPZAEUEUFZWOJUAEUJUGAWNWQUAAWNWQAWNQZWPMOZEPZWTNO
-      ZGRZXBSZXBWTGRZXBSZQZNETZQMVLZENEGMFWPHIWPUHUIWSXIXHMEUKZEXHMEULWSXHMEUMZ
-      XJEPWSWMWMGRZEPZXHWTXLSZUNZMETXKWSFUOPZWNWNXMAXPWNKUPZAWNUQZXREFWMWMGHIUR
-      USWSXOMEWSXAQZXHXNXSXHQZWTWTGRZWTXLXTYAWTSZYBXSXHYBYBQZXSXGYCNWTEWSXAUQXB
-      WTSZXGYCUNXSYDXDYBXFYBYDXCYAXBWTXBWTWTGUTYDVAZVBYDXEYAXBWTXBWTWTGVCYEVBVD
-      VEVFVMVGXTBCDEFWTWMGHIAWRWNXAXHJVHWSXPXAXHXQVIABOZCOZGRYFDOZYGGRGRGRYHSDE
-      TCETBETZWNXAXHLVHWSXAXHVJWSWNXAXHXRVIVKVNXSXNQZXGNEYJXBEPZQZXDXFYLXCXBXBG
-      RZXBGRXBYLWTYMXBGYLWTXLYMXSXNYKVJYLBCDEFWMXBGHIAWRWNXAXNYKJVOZWSXPXAXNYKX
-      QVHZAYIWNXAXNYKLVOZWSWNXAXNYKXRVHYJYKUQZVKVPZVQYLBCDEFXBGHIYNYOYPYQVRVPYL
-      XEXBYMGRXBYLWTYMXBGYRWBYLBCDEFXBXBGHIYNYOYPYQYQVSVPVTWCWAWCXHMEXLWDWEXHME
-      WFWGWHWIWLWJWK $.
+    mendpadmlem7e $p |- ( ph
+             -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) $=
+      ( cv wcel co wceq wa wral vu wex wreu c0 wne n0 sylib wb cmgm simpr mgmcl
+      adantr syl3anc oveq2 id eqeq12d oveq1 anbi12d adantl rspcdv imp ad3antrrr
+      simpld simplr mendpadmlem6 eqtr3d ad4antr eqtrd mendpadmlem5 mendpadmlem4
+      ad2antrr oveq1d oveq2d jca ralrimiva impbida reu6i syl2anc ex exlimdv mpd
+      ) AUAOZFPZUAUBZGOZEOZIQZWFRZWFWEIQZWFRZSZEFTZGFUCZAFUDUEZWDLUAFUFUGAWCWMU
+      AAWCWMAWCSZWBWBIQZFPZWLWEWPRZUHZGFTWMWOHUIPZWCWCWQAWTWCMULZAWCUJZXBFHWBWB
+      IJKUKUMWOWSGFWOWEFPZSZWLWRXDWLSZWEWEIQZWEWPXEXFWERZXGXDWLXGXGSZXDWKXHEWEF
+      WOXCUJWFWERZWKXHUHXDXIWHXGWJXGXIWGXFWFWEWFWEWEIUNXIUOZUPXIWIXFWFWEWFWEWEI
+      UQXJUPURUSUTVAVCXEBCDFHWEWBIJKAWNWCXCWLLVBWOWTXCWLXAVKABOZCOZIQXKDOZXLIQI
+      QIQXMRDFTCFTBFTZWCXCWLNVBWOXCWLVDWOWCXCWLXBVKVEVFXDWRSZWKEFXOWFFPZSZWHWJX
+      QWGWFWFIQZWFIQWFXQWEXRWFIXQWEWPXRXDWRXPVDXQBCDFHWBWFIJKAWNWCXCWRXPLVGZWOW
+      TXCWRXPXAVBZAXNWCXCWRXPNVGZWOWCXCWRXPXBVBXOXPUJZVEVHZVLXQBCDFHWFIJKXSXTYA
+      YBVIVHXQWIWFXRIQWFXQWEXRWFIYCVMXQBCDFHWFWFIJKXSXTYAYBYBVJVHVNVOVPVOWLGFWP
+      VQVRVSVTWA $.
 
-    $( Lemma for mendpadm.  Multiplying two times from the left or right by the
-       same element gives the original element. $)
-    mendpadmlem8 $p |- ( ph -> A. x e. B A. y e. B ( ( x .o. ( x .o. y ) ) = y /\ ( ( x .o. y ) .o. y ) = x ) ) $= ? $.
+    $( Lemma for mendpadm. ` M ` has an identity element. $)
+    mendpadmlem7 $p |- ( ph -> ( 0g ` M ) e. B ) $=
+      ( vi vt c0g cv wcel co wceq wa wral eqid grpidval crio wreu mendpadmlem7e
+      cfv cio df-riota riotacl syl eqeltrrid eqeltrid ) AFOUGZMPZEQUONPZGRUPSUP
+      UOGRUPSTNEUAZTMUHZENEGMFUNHIUNUBUCAURUQMEUDZEUQMEUIAUQMEUEUSEQABCDNEMFGHI
+      JKLUFUQMEUJUKULUM $.
+
+   ${
+    $d .o. i t x y z $. $d B i t x y z $. $d M i t y z $. $d X t x y z $.
+    $d Y t z $. $d i ph t x y z $.
+    mendpadm8.1 $e |- ( ph -> X e. B ) $.
+    mendpadm8.2 $e |- ( ph -> Y e. B ) $.
+    $( Lemma for mendpadm. Multiplying two times from the left by the same
+       element gives the original element. $)
+    mendpadmlem8a $p |- ( ph -> ( X .o. ( X .o. Y ) ) = Y ) $=
+      ( vt vi co wceq c0g cfv wcel eqid wral wreu wrex mendpadmlem7e reurex syl
+      wa cv mgmlrid simprd mpdan oveq2d oveq12d mendpadmlem7 oveq1 eqeq1d oveq2
+      w3a id eqeq12d rspc3v imp syl31anc eqtr3d ) AGFUAUBZISZGHVIISZISZISZGGHIS
+      ZISHAVJGVLVNIAGEUCZVJGTZOAVOUKVIGISGTVPAQEIRFGVIJVIUDZKARULZQULZISVSTVSVR
+      ISVSTUKQEUEZREUFVTREUGABCDQERFIJKLMNUHVTREUIUJZUMUNUOAVKHGIAHEUCZVKHTZPAW
+      BUKVIHISHTWCAQEIRFHVIJVQKWAUMUNUOUPUQAVOVIEUCZWBBULZCULZISZWEDULZWFISZISZ
+      ISZWHTZDEUECEUEBEUEZVMHTZOABCDEFIJKLMNURPNVOWDWBVBWMWNWLWNGWFISZGWIISZISZ
+      WHTVJGWHVIISZISZISZWHTBCDGVIHEEEWEGTZWKWQWHXAWGWOWJWPIWEGWFIUSWEGWIIUSUQU
+      TWFVITZWQWTWHXBWOVJWPWSIWFVIGIVAXBWIWRGIWFVIWHIVAUPUQUTWHHTZWTVMWHHXCWSVL
+      VJIXCWRVKGIWHHVIIUSUPUPXCVCVDVEVFVGVH $.
+
+    $( Lemma for mendpadm. Multiplying two times from the right by the same
+       element gives the original element. $)
+    mendpadmlem8b $p |- ( ph -> ( ( X .o. Y ) .o. Y ) = X ) $=
+      ( co oveq2d cv wceq mendpadmlem8a wcel wral oveq1 oveq12d eqeq1d oveq2 id
+      w3a eqeq12d rspc3v imp syl31anc eqtr3d ) AGHIQZGUOIQZIQZUOHIQGAUPHUOIABCD
+      EFGHIJKLMNOPUARAGEUBZHEUBZURBSZCSZIQZUTDSZVAIQZIQZIQZVCTZDEUCCEUCBEUCZUQG
+      TZOPONURUSURUIVHVIVGVIGVAIQZGVDIQZIQZVCTUOGVCHIQZIQZIQZVCTBCDGHGEEEUTGTZV
+      FVLVCVPVBVJVEVKIUTGVAIUDUTGVDIUDUEUFVAHTZVLVOVCVQVJUOVKVNIVAHGIUGVQVDVMGI
+      VAHVCIUGRUEUFVCGTZVOUQVCGVRVNUPUOIVRVMUOGIVCGHIUDRRVRUHUJUKULUMUN $.
+   $}
 
     $( Lemma for mendpadm.  Multiplication is commutative. $)
     mendpadmlem9 $p |- ( ph -> A. x e. B A. y e. B ( x .o. y ) = ( y .o. x ) ) $= ? $.

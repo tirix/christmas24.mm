@@ -1,0 +1,124 @@
+$theorem mendpadmlem7e
+
+* Lemma for mendpadm. ` M ` has an identity element.
+
+h1::mendpadm.a                 |- B = ( Base ` M )
+h2::mendpadm.b                 |- .o. = ( +g ` M )
+h3::mendpadm.c                  |- ( ph -> B =/= (/) )
+h4::mendpadm.d                   |- ( ph -> M e. Mgm )
+h5::mendpadm.e                  |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+6::eqid             |- ( 0g ` M ) = ( 0g ` M )
+7:1,2,6:grpidval   |- ( 0g ` M ) = ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
+8::riotacl         |- ( E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) e. B )
+9::df-riota        |- ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) = ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
+10::reu6i              |- ( ( ( u .o. u ) e. B /\ A. i e. B ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> i = ( u .o. u ) ) ) -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+11:1,2:mgmcl            |- ( ( M e. Mgm /\ u e. B /\ u e. B ) -> ( u .o. u ) e. B )
+12:4:adantr                     |- ( ( ph /\ u e. B ) -> M e. Mgm )
+13::simpr                       |- ( ( ph /\ u e. B ) -> u e. B )
+14:12,13,13,11:syl3anc
+                       |- ( ( ph /\ u e. B ) -> ( u .o. u ) e. B )
+15:3:ad4antr                   |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> B =/= (/) )
+16:12:ad3antrrr                |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> M e. Mgm )
+17:5:ad4antr                   |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+18:13:ad3antrrr                |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> u e. B )
+19::simpr                      |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> t e. B )
+20:1,2,15,16,17,18,19:mendpadmlem6
+                              |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( u .o. u ) = ( t .o. t ) )
+21::simpr                    |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> t e. B )
+22:1,2,15,16,17,21:mendpadmlem5
+                            |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( ( t .o. t ) .o. t ) = t )
+23::simplr                    |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> i = ( u .o. u ) )
+24:23,20:eqtrd               |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> i = ( t .o. t ) )
+25:24:oveq1d                |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( i .o. t ) = ( ( t .o. t ) .o. t ) )
+26:25,22:eqtrd             |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( i .o. t ) = t )
+27:24:oveq2d                |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( t .o. i ) = ( t .o. ( t .o. t ) ) )
+28:1,2,15,16,17,19,19:mendpadmlem4
+                            |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( t .o. ( t .o. t ) ) = t )
+29:27,28:eqtrd             |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( t .o. i ) = t )
+30:3:ad3antrrr             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> B =/= (/) )
+31:12:ad2antrr             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> M e. Mgm )
+32:5:ad3antrrr             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+33::simplr                 |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> i e. B )
+34:13:ad2antrr             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> u e. B )
+35:1,2,30,31,32,33,34:mendpadmlem6
+                          |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> ( i .o. i ) = ( u .o. u ) )
+36::simpr                    |- ( ( ( ph /\ u e. B ) /\ i e. B ) -> i e. B )
+37::oveq1                       |- ( t = i -> ( t .o. i ) = ( i .o. i ) )
+38::oveq2                       |- ( t = i -> ( i .o. t ) = ( i .o. i ) )
+39::id                          |- ( t = i -> t = i )
+40:38,39:eqeq12d               |- ( t = i -> ( ( i .o. t ) = t <-> ( i .o. i ) = i ) )
+41:37,39:eqeq12d               |- ( t = i -> ( ( t .o. i ) = t <-> ( i .o. i ) = i ) )
+42:40,41:anbi12d              |- ( t = i -> ( ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) ) )
+43:42:adantl                 |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ t = i ) -> ( ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) ) )
+44:36,43:rspcdv             |- ( ( ( ph /\ u e. B ) /\ i e. B ) -> ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) ) )
+45:44:imp                  |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) )
+46:45:simpld              |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> ( i .o. i ) = i )
+47:46,35:eqtr3d          |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> i = ( u .o. u ) )
+48:26,29:jca              |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+49:48:ralrimiva          |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) -> A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+50:47,49:impbida        |- ( ( ( ph /\ u e. B ) /\ i e. B ) -> ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> i = ( u .o. u ) ) )
+51:50:ralrimiva        |- ( ( ph /\ u e. B ) -> A. i e. B ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> i = ( u .o. u ) ) )
+52:14,51,10:syl2anc
+                      |- ( ( ph /\ u e. B ) -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+53:52:ex             |- ( ph -> ( u e. B -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
+54:53:exlimdv       |- ( ph -> ( E. u u e. B -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
+55::n0               |- ( B =/= (/) <-> E. u u e. B )
+56:3,55:sylib       |- ( ph -> E. u u e. B )
+qed:56,54:mpd      |- ( ph -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+
+$= ( cv wcel co wceq wa wral vu wex wreu c0 n0 sylib wb cmgm adantr simpr mgmcl
+   wne syl3anc oveq2 id eqeq12d oveq1 anbi12d adantl rspcdv imp simpld ad2antrr
+   ad3antrrr simplr mendpadmlem6 eqtr3d ad4antr eqtrd mendpadmlem5 mendpadmlem4
+   oveq1d oveq2d jca ralrimiva impbida reu6i syl2anc ex exlimdv mpd ) AUAOZFPZU
+   AUBZGOZEOZIQZWFRZWFWEIQZWFRZSZEFTZGFUCZAFUDULZWDLUAFUEUFAWCWMUAAWCWMAWCSZWBW
+   BIQZFPZWLWEWPRZUGZGFTWMWOHUHPZWCWCWQAWTWCMUIZAWCUJZXBFHWBWBIJKUKUMWOWSGFWOWE
+   FPZSZWLWRXDWLSZWEWEIQZWEWPXEXFWERZXGXDWLXGXGSZXDWKXHEWEFWOXCUJWFWERZWKXHUGXD
+   XIWHXGWJXGXIWGXFWFWEWFWEWEIUNXIUOZUPXIWIXFWFWEWFWEWEIUQXJUPURUSUTVAVBXEBCDFH
+   WEWBIJKAWNWCXCWLLVDWOWTXCWLXAVCABOZCOZIQXKDOZXLIQIQIQXMRDFTCFTBFTZWCXCWLNVDW
+   OXCWLVEWOWCXCWLXBVCVFVGXDWRSZWKEFXOWFFPZSZWHWJXQWGWFWFIQZWFIQWFXQWEXRWFIXQWE
+   WPXRXDWRXPVEXQBCDFHWBWFIJKAWNWCXCWRXPLVHZWOWTXCWRXPXAVDZAXNWCXCWRXPNVHZWOWCX
+   CWRXPXBVDXOXPUJZVFVIZVLXQBCDFHWFIJKXSXTYAYBVJVIXQWIWFXRIQWFXQWEXRWFIYCVMXQBC
+   DFHWFWFIJKXSXTYAYBYBVKVIVNVOVPVOWLGFWPVQVRVSVTWA $.
+
+$d i t
+$d B i
+$d B t
+$d M i
+$d M t
+$d M u
+$d B u
+$d ph u
+$d i u
+$d .o. i
+$d i ph
+$d ph t
+$d t u
+$d .o. t
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d ph x
+$d ph y
+$d ph z
+$d t x
+$d t y
+$d t z
+$d Y x
+$d Y y
+$d Y z
+$d X x
+$d X y
+$d X z
+$d u x
+$d u y
+$d u z
+$d i x
+$d i y
+$d i z
+$d .o. u

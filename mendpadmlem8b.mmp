@@ -1,0 +1,60 @@
+$theorem mendpadmlem8b
+
+* Lemma for mendpadm.  Multiplying two times from the right by the same element gives the original element.
+
+h1::mendpadm.a        |- B = ( Base ` M )
+h2::mendpadm.b        |- .o. = ( +g ` M )
+h3::mendpadm.c        |- ( ph -> B =/= (/) )
+h4::mendpadm.d        |- ( ph -> M e. Mgm )
+h5::mendpadm.e        |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadm8.1       |- ( ph -> X e. B )
+h7::mendpadm8.2       |- ( ph -> Y e. B )
+8:1,2,3,4,5,6,7:mendpadmlem8a
+                     |- ( ph -> ( X .o. ( X .o. Y ) ) = Y )
+9::oveq1                 |- ( x = X -> ( x .o. y ) = ( X .o. y ) )
+10::oveq1                |- ( x = X -> ( x .o. ( z .o. y ) ) = ( X .o. ( z .o. y ) ) )
+11:9,10:oveq12d         |- ( x = X -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) )
+12:11:eqeq1d           |- ( x = X -> ( ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) = z ) )
+13::oveq2                |- ( y = Y -> ( X .o. y ) = ( X .o. Y ) )
+14::oveq2                 |- ( y = Y -> ( z .o. y ) = ( z .o. Y ) )
+15:14:oveq2d             |- ( y = Y -> ( X .o. ( z .o. y ) ) = ( X .o. ( z .o. Y ) ) )
+16:13,15:oveq12d        |- ( y = Y -> ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) = ( ( X .o. Y ) .o. ( X .o. ( z .o. Y ) ) ) )
+17:16:eqeq1d           |- ( y = Y -> ( ( ( X .o. y ) .o. ( X .o. ( z .o. y ) ) ) = z <-> ( ( X .o. Y ) .o. ( X .o. ( z .o. Y ) ) ) = z ) )
+18::oveq1                 |- ( z = X -> ( z .o. Y ) = ( X .o. Y ) )
+19:18:oveq2d             |- ( z = X -> ( X .o. ( z .o. Y ) ) = ( X .o. ( X .o. Y ) ) )
+20:19:oveq2d            |- ( z = X -> ( ( X .o. Y ) .o. ( X .o. ( z .o. Y ) ) ) = ( ( X .o. Y ) .o. ( X .o. ( X .o. Y ) ) ) )
+21::id                  |- ( z = X -> z = X )
+22:20,21:eqeq12d       |- ( z = X -> ( ( ( X .o. Y ) .o. ( X .o. ( z .o. Y ) ) ) = z <-> ( ( X .o. Y ) .o. ( X .o. ( X .o. Y ) ) ) = X ) )
+23:12,17,22:rspc3v    |- ( ( X e. B /\ Y e. B /\ X e. B ) -> ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> ( ( X .o. Y ) .o. ( X .o. ( X .o. Y ) ) ) = X ) )
+24:23:imp            |- ( ( ( X e. B /\ Y e. B /\ X e. B ) /\ A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z ) -> ( ( X .o. Y ) .o. ( X .o. ( X .o. Y ) ) ) = X )
+25:6,7,6,5,24:syl31anc
+                    |- ( ph -> ( ( X .o. Y ) .o. ( X .o. ( X .o. Y ) ) ) = X )
+26:8:oveq2d         |- ( ph -> ( ( X .o. Y ) .o. ( X .o. ( X .o. Y ) ) ) = ( ( X .o. Y ) .o. Y ) )
+qed:26,25:eqtr3d   |- ( ph -> ( ( X .o. Y ) .o. Y ) = X )
+
+$= ( co oveq2d cv wceq mendpadmlem8a wcel wral w3a oveq1 oveq12d eqeq1d eqeq12d
+   oveq2 id rspc3v imp syl31anc eqtr3d ) AGHIQZGUOIQZIQZUOHIQGAUPHUOIABCDEFGHIJ
+   KLMNOPUARAGEUBZHEUBZURBSZCSZIQZUTDSZVAIQZIQZIQZVCTZDEUCCEUCBEUCZUQGTZOPONURU
+   SURUDVHVIVGVIGVAIQZGVDIQZIQZVCTUOGVCHIQZIQZIQZVCTBCDGHGEEEUTGTZVFVLVCVPVBVJV
+   EVKIUTGVAIUEUTGVDIUEUFUGVAHTZVLVOVCVQVJUOVKVNIVAHGIUIVQVDVMGIVAHVCIUIRUFUGVC
+   GTZVOUQVCGVRVNUPUOIVRVMUOGIVCGHIUERRVRUJUHUKULUMUN $.
+
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d M y
+$d M z
+$d X x
+$d X y
+$d X z
+$d Y z
+$d ph x
+$d ph y
+$d ph z
+$d Y y

@@ -2,88 +2,25 @@ $theorem mendpadmlem7
 
 * Lemma for mendpadm. ` M ` has an identity element.
 
-h1::mendpadm.a                    |- B = ( Base ` M )
-h2::mendpadm.b                    |- .o. = ( +g ` M )
-h3::mendpadm.c                     |- ( ph -> B =/= (/) )
-h4::mendpadm.d                      |- ( ph -> M e. Mgm )
-h5::mendpadm.e                     |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
-6::eqid                 |- ( 0g ` M ) = ( 0g ` M )
-7:1,2,6:grpidval       |- ( 0g ` M ) = ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
-8::riotacl               |- ( E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) e. B )
-9::df-riota             |- ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) = ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
-10::reu6i                 |- ( ( ( u .o. u ) e. B /\ A. i e. B ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> i = ( u .o. u ) ) ) -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
-11:1,2:mgmcl               |- ( ( M e. Mgm /\ u e. B /\ u e. B ) -> ( u .o. u ) e. B )
-12:4:adantr                        |- ( ( ph /\ u e. B ) -> M e. Mgm )
-13::simpr                          |- ( ( ph /\ u e. B ) -> u e. B )
-14:12,13,13,11:syl3anc
-                          |- ( ( ph /\ u e. B ) -> ( u .o. u ) e. B )
-15:3:ad4antr                      |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> B =/= (/) )
-16:12:ad3antrrr                   |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> M e. Mgm )
-17:5:ad4antr                      |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
-18:13:ad3antrrr                   |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> u e. B )
-19::simpr                         |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> t e. B )
-20:1,2,15,16,17,18,19:mendpadmlem6
-                                 |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( u .o. u ) = ( t .o. t ) )
-21::simpr                       |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> t e. B )
-22:1,2,15,16,17,21:mendpadmlem5
-                               |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( ( t .o. t ) .o. t ) = t )
-23::simplr                       |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> i = ( u .o. u ) )
-24:23,20:eqtrd                  |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> i = ( t .o. t ) )
-25:24:oveq1d                   |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( i .o. t ) = ( ( t .o. t ) .o. t ) )
-26:25,22:eqtrd                |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( i .o. t ) = t )
-27:24:oveq2d                   |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( t .o. i ) = ( t .o. ( t .o. t ) ) )
-28:1,2,15,16,17,19,19:mendpadmlem4
-                               |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( t .o. ( t .o. t ) ) = t )
-29:27,28:eqtrd                |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( t .o. i ) = t )
-30:3:ad3antrrr                |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> B =/= (/) )
-31:12:ad2antrr                |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> M e. Mgm )
-32:5:ad3antrrr                |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
-33::simplr                    |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> i e. B )
-34:13:ad2antrr                |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> u e. B )
-35:1,2,30,31,32,33,34:mendpadmlem6
-                             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> ( i .o. i ) = ( u .o. u ) )
-36::simpr                       |- ( ( ( ph /\ u e. B ) /\ i e. B ) -> i e. B )
-37::oveq1                          |- ( t = i -> ( t .o. i ) = ( i .o. i ) )
-38::oveq2                          |- ( t = i -> ( i .o. t ) = ( i .o. i ) )
-39::id                             |- ( t = i -> t = i )
-40:38,39:eqeq12d                  |- ( t = i -> ( ( i .o. t ) = t <-> ( i .o. i ) = i ) )
-41:37,39:eqeq12d                  |- ( t = i -> ( ( t .o. i ) = t <-> ( i .o. i ) = i ) )
-42:40,41:anbi12d                 |- ( t = i -> ( ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) ) )
-43:42:adantl                    |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ t = i ) -> ( ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) ) )
-44:36,43:rspcdv                |- ( ( ( ph /\ u e. B ) /\ i e. B ) -> ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) ) )
-45:44:imp                     |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> ( ( i .o. i ) = i /\ ( i .o. i ) = i ) )
-46:45:simpld                 |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> ( i .o. i ) = i )
-47:46,35:eqtr3d             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) -> i = ( u .o. u ) )
-48:26,29:jca                 |- ( ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) /\ t e. B ) -> ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
-49:48:ralrimiva             |- ( ( ( ( ph /\ u e. B ) /\ i e. B ) /\ i = ( u .o. u ) ) -> A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
-50:47,49:impbida           |- ( ( ( ph /\ u e. B ) /\ i e. B ) -> ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> i = ( u .o. u ) ) )
-51:50:ralrimiva           |- ( ( ph /\ u e. B ) -> A. i e. B ( A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) <-> i = ( u .o. u ) ) )
-52:14,51,10:syl2anc
-                         |- ( ( ph /\ u e. B ) -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
-53:52,8:syl             |- ( ( ph /\ u e. B ) -> ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) e. B )
-54:9,53:eqeltrrid      |- ( ( ph /\ u e. B ) -> ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) ) e. B )
-55:7,54:eqeltrid      |- ( ( ph /\ u e. B ) -> ( 0g ` M ) e. B )
-56:55:ex             |- ( ph -> ( u e. B -> ( 0g ` M ) e. B ) )
-57:56:exlimdv       |- ( ph -> ( E. u u e. B -> ( 0g ` M ) e. B ) )
-58::n0               |- ( B =/= (/) <-> E. u u e. B )
-59:3,58:sylib       |- ( ph -> E. u u e. B )
-qed:59,57:mpd      |- ( ph -> ( 0g ` M ) e. B )
+h1::mendpadm.a         |- B = ( Base ` M )
+h2::mendpadm.b         |- .o. = ( +g ` M )
+h3::mendpadm.c         |- ( ph -> B =/= (/) )
+h4::mendpadm.d         |- ( ph -> M e. Mgm )
+h5::mendpadm.e         |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+6::eqid              |- ( 0g ` M ) = ( 0g ` M )
+7:1,2,6:grpidval    |- ( 0g ` M ) = ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
+8::riotacl            |- ( E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) e. B )
+9::df-riota          |- ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) = ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) )
+10:1,2,3,4,5:mendpadmlem7e
+                      |- ( ph -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+11:10,8:syl          |- ( ph -> ( iota_ i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) e. B )
+12:9,11:eqeltrrid   |- ( ph -> ( iota i ( i e. B /\ A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) ) ) e. B )
+qed:7,12:eqeltrid  |- ( ph -> ( 0g ` M ) e. B )
 
-$= ( vi vt cv wcel wa co wceq wral vu wex c0g cfv c0 wne n0 sylib eqid grpidval
-   crio df-riota wreu wb cmgm adantr simpr mgmcl syl3anc oveq2 id eqeq12d oveq1
-   cio anbi12d adantl rspcdv imp simpld ad3antrrr ad2antrr mendpadmlem6 ad4antr
-   simplr eqtr3d eqtrd oveq1d mendpadmlem5 mendpadmlem4 ralrimiva impbida reu6i
-   oveq2d jca syl2anc riotacl syl eqeltrrid eqeltrid ex exlimdv mpd ) AUAOZEPZU
-   AUBZFUCUDZEPZAEUEUFZWOJUAEUGUHAWNWQUAAWNWQAWNQZWPMOZEPZWTNOZGRZXBSZXBWTGRZXB
-   SZQZNETZQMVDZENEGMFWPHIWPUIUJWSXIXHMEUKZEXHMEULWSXHMEUMZXJEPWSWMWMGRZEPZXHWT
-   XLSZUNZMETXKWSFUOPZWNWNXMAXPWNKUPZAWNUQZXREFWMWMGHIURUSWSXOMEWSXAQZXHXNXSXHQ
-   ZWTWTGRZWTXLXTYAWTSZYBXSXHYBYBQZXSXGYCNWTEWSXAUQXBWTSZXGYCUNXSYDXDYBXFYBYDXC
-   YAXBWTXBWTWTGUTYDVAZVBYDXEYAXBWTXBWTWTGVCYEVBVEVFVGVHVIXTBCDEFWTWMGHIAWRWNXA
-   XHJVJWSXPXAXHXQVKABOZCOZGRYFDOZYGGRGRGRYHSDETCETBETZWNXAXHLVJWSXAXHVNWSWNXAX
-   HXRVKVLVOXSXNQZXGNEYJXBEPZQZXDXFYLXCXBXBGRZXBGRXBYLWTYMXBGYLWTXLYMXSXNYKVNYL
-   BCDEFWMXBGHIAWRWNXAXNYKJVMZWSXPXAXNYKXQVJZAYIWNXAXNYKLVMZWSWNXAXNYKXRVJYJYKU
-   QZVLVPZVQYLBCDEFXBGHIYNYOYPYQVRVPYLXEXBYMGRXBYLWTYMXBGYRWCYLBCDEFXBXBGHIYNYO
-   YPYQYQVSVPWDVTWAVTXHMEXLWBWEXHMEWFWGWHWIWJWKWL $.
+$= ( vi vt c0g cv wcel co wceq wa cfv wral cio eqid grpidval crio df-riota wreu
+   mendpadmlem7e riotacl syl eqeltrrid eqeltrid ) AFOUAZMPZEQUONPZGRUPSUPUOGRUP
+   STNEUBZTMUCZENEGMFUNHIUNUDUEAURUQMEUFZEUQMEUGAUQMEUHUSEQABCDNEMFGHIJKLUIUQME
+   UJUKULUM $.
 
 $d i t
 $d B i
