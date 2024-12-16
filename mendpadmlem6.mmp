@@ -1,0 +1,89 @@
+$theorem mendpadmlem6
+
+* Lemma for mendpadm.  Squares of all elements are equal to each other.
+
+h1::mendpadm.a           |- B = ( Base ` M )
+h2::mendpadm.b           |- .o. = ( +g ` M )
+h3::mendpadm.c            |- ( ph -> B =/= (/) )
+h4::mendpadm.d            |- ( ph -> M e. Mgm )
+h5::mendpadm.e            |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadmlem5.1   |- ( ph -> X e. B )
+h7::mendpadmlem6.1        |- ( ph -> Y e. B )
+8:1,2,3,4,5,6,7:mendpadmlem3
+                    |- ( ph -> E. t e. B ( t .o. Y ) = X )
+9::simpr               |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( t .o. Y ) = X )
+10:9,9:oveq12d     |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( ( t .o. Y ) .o. ( t .o. Y ) ) = ( X .o. X ) )
+11:3:ad2antrr            |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> B =/= (/) )
+12:4:ad2antrr            |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> M e. Mgm )
+13:5:ad2antrr            |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+14:7:ad2antrr            |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> Y e. B )
+15::simplr            |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> t e. B )
+16:1,2:mgmcl            |- ( ( M e. Mgm /\ Y e. B /\ Y e. B ) -> ( Y .o. Y ) e. B )
+17:4,7,7,16:syl3anc
+                       |- ( ph -> ( Y .o. Y ) e. B )
+18:17:ad2antrr        |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( Y .o. Y ) e. B )
+19::oveq1                 |- ( x = t -> ( x .o. y ) = ( t .o. y ) )
+20::oveq1                 |- ( x = t -> ( x .o. ( z .o. y ) ) = ( t .o. ( z .o. y ) ) )
+21:19,20:oveq12d         |- ( x = t -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( t .o. y ) .o. ( t .o. ( z .o. y ) ) ) )
+22:21:eqeq1d            |- ( x = t -> ( ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( ( t .o. y ) .o. ( t .o. ( z .o. y ) ) ) = z ) )
+23::oveq2                 |- ( y = Y -> ( t .o. y ) = ( t .o. Y ) )
+24::oveq2                  |- ( y = Y -> ( z .o. y ) = ( z .o. Y ) )
+25:24:oveq2d              |- ( y = Y -> ( t .o. ( z .o. y ) ) = ( t .o. ( z .o. Y ) ) )
+26:23,25:oveq12d         |- ( y = Y -> ( ( t .o. y ) .o. ( t .o. ( z .o. y ) ) ) = ( ( t .o. Y ) .o. ( t .o. ( z .o. Y ) ) ) )
+27:26:eqeq1d            |- ( y = Y -> ( ( ( t .o. y ) .o. ( t .o. ( z .o. y ) ) ) = z <-> ( ( t .o. Y ) .o. ( t .o. ( z .o. Y ) ) ) = z ) )
+28::oveq1                  |- ( z = ( Y .o. Y ) -> ( z .o. Y ) = ( ( Y .o. Y ) .o. Y ) )
+29:28:oveq2d              |- ( z = ( Y .o. Y ) -> ( t .o. ( z .o. Y ) ) = ( t .o. ( ( Y .o. Y ) .o. Y ) ) )
+30:29:oveq2d             |- ( z = ( Y .o. Y ) -> ( ( t .o. Y ) .o. ( t .o. ( z .o. Y ) ) ) = ( ( t .o. Y ) .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) )
+31::id                   |- ( z = ( Y .o. Y ) -> z = ( Y .o. Y ) )
+32:30,31:eqeq12d        |- ( z = ( Y .o. Y ) -> ( ( ( t .o. Y ) .o. ( t .o. ( z .o. Y ) ) ) = z <-> ( ( t .o. Y ) .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) = ( Y .o. Y ) ) )
+33:22,27,32:rspc3v     |- ( ( t e. B /\ Y e. B /\ ( Y .o. Y ) e. B ) -> ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> ( ( t .o. Y ) .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) = ( Y .o. Y ) ) )
+34:33:imp             |- ( ( ( t e. B /\ Y e. B /\ ( Y .o. Y ) e. B ) /\ A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z ) -> ( ( t .o. Y ) .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) = ( Y .o. Y ) )
+35:15,14,18,13,34:syl31anc
+                     |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( ( t .o. Y ) .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) = ( Y .o. Y ) )
+36:1,2,11,12,13,14:mendpadmlem5
+                        |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( ( Y .o. Y ) .o. Y ) = Y )
+37:36:oveq2d           |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( t .o. ( ( Y .o. Y ) .o. Y ) ) = ( t .o. Y ) )
+38:37,9:eqtrd         |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( t .o. ( ( Y .o. Y ) .o. Y ) ) = X )
+39:38:oveq2d         |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( X .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) = ( X .o. X ) )
+40:9:oveq1d          |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( ( t .o. Y ) .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) = ( X .o. ( t .o. ( ( Y .o. Y ) .o. Y ) ) ) )
+41:40,35,39:3eqtr3rd
+                    |- ( ( ( ph /\ t e. B ) /\ ( t .o. Y ) = X ) -> ( X .o. X ) = ( Y .o. Y ) )
+qed:41,8:r19.29a   |- ( ph -> ( X .o. X ) = ( Y .o. Y ) )
+
+$= ( co wceq ad2antrr oveq2d vt cv wcel wa simpr oveq1d wral cmgm mgmcl syl3anc
+   simplr oveq1 oveq12d eqeq1d oveq2 id eqeq12d rspc3v syl31anc c0 mendpadmlem5
+   w3a imp wne eqtrd 3eqtr3rd mendpadmlem3 r19.29a ) AUAUBZHIQZGRZGGIQZHHIQZRUA
+   EAVIEUCZUDZVKUDZVJVIVMHIQZIQZIQZGVRIQVMVLVPVJGVRIVOVKUEZUFVPVNHEUCZVMEUCZBUB
+   ZCUBZIQZWCDUBZWDIQZIQZIQZWFRZDEUGCEUGBEUGZVSVMRZAVNVKUKAWAVNVKPSZAWBVNVKAFUH
+   UCZWAWAWBMPPEFHHIJKUIUJSAWKVNVKNSZVNWAWBVBWKWLWJWLVIWDIQZVIWGIQZIQZWFRVJVIWF
+   HIQZIQZIQZWFRBCDVIHVMEEEWCVIRZWIWRWFXBWEWPWHWQIWCVIWDIULWCVIWGIULUMUNWDHRZWR
+   XAWFXCWPVJWQWTIWDHVIIUOXCWGWSVIIWDHWFIUOTUMUNWFVMRZXAVSWFVMXDWTVRVJIXDWSVQVI
+   IWFVMHIULTTXDUPUQURVCUSVPVRGGIVPVRVJGVPVQHVIIVPBCDEFHIJKAEUTVDVNVKLSAWNVNVKM
+   SWOWMVATVTVETVFABCDUAEFHGIJKLMNOPVGVH $.
+
+$d .o. t
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d B t
+$d Y x
+$d Y y
+$d Y z
+$d Y t
+$d X x
+$d X y
+$d X z
+$d X t
+$d ph x
+$d ph y
+$d ph z
+$d ph t
+$d t x
+$d t y
+$d t z

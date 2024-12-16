@@ -290,10 +290,23 @@ $)
       ZNNNMUQUQUQUCVFVGVEVGGUSHOZGVBHOZHOZVARUNGVAGHOZHOZHOZVARBCDGGGEEEURGRZVD
       VJVAVAVNUTVHVCVIHURGUSHTURGVBHTUDVNVAUEUGUSGRZVJVMVAVOVHUNVIVLHUSGGHUHVOV
       BVKGHUSGVAHUHPUDUFVAGRZVMUPVAGVPVLUOUNHVPVKUNGHVAGGHTPPVPUIUGUJUKULUM $.
-   $}
 
-    $( Lemma for mendpadm.  Squares of all elements are equal to each other. $)
-    mendpadmlem6 $p |- ( ph -> A. x e. B A. y e. B ( x .o. x ) = ( y .o. y ) ) $= ? $.
+    $d .o. t x y z $. $d B t x y z $. $d X t x y z $. $d Y t x y z $.
+    $d ph t x y z $.
+    mendpadmlem6.1 $e |- ( ph -> Y e. B ) $.
+    $( Lemma for mendpadm. Squares of all elements are equal to each other. $)
+    mendpadmlem6 $p |- ( ph -> ( X .o. X ) = ( Y .o. Y ) ) $=
+      ( co wceq ad2antrr oveq2d vt cv wcel wa simpr oveq1d simplr mgmcl syl3anc
+      wral w3a oveq1 oveq12d eqeq1d oveq2 id eqeq12d rspc3v imp syl31anc c0 wne
+      cmgm mendpadmlem5 eqtrd 3eqtr3rd mendpadmlem3 r19.29a ) AUAUBZHIQZGRZGGIQ
+      ZHHIQZRUAEAVIEUCZUDZVKUDZVJVIVMHIQZIQZIQZGVRIQVMVLVPVJGVRIVOVKUEZUFVPVNHE
+      UCZVMEUCZBUBZCUBZIQZWCDUBZWDIQZIQZIQZWFRZDEUJCEUJBEUJZVSVMRZAVNVKUGAWAVNV
+      KPSZAWBVNVKAFVCUCZWAWAWBMPPEFHHIJKUHUISAWKVNVKNSZVNWAWBUKWKWLWJWLVIWDIQZV
+      IWGIQZIQZWFRVJVIWFHIQZIQZIQZWFRBCDVIHVMEEEWCVIRZWIWRWFXBWEWPWHWQIWCVIWDIU
+      LWCVIWGIULUMUNWDHRZWRXAWFXCWPVJWQWTIWDHVIIUOXCWGWSVIIWDHWFIUOTUMUNWFVMRZX
+      AVSWFVMXDWTVRVJIXDWSVQVIIWFVMHIULTTXDUPUQURUSUTVPVRGGIVPVRVJGVPVQHVIIVPBC
+      DEFHIJKAEVAVBVNVKLSAWNVNVKMSWOWMVDTVTVETVFABCDUAEFHGIJKLMNOPVGVH $.
+  $}
 
     $( Lemma for mendpadm. ` M ` has an identity element. $)
     mendpadmlem7 $p |- ( ph -> ( 0g ` M ) e. B ) $= ? $.
