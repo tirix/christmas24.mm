@@ -1,0 +1,44 @@
+$theorem mendpadmlem9
+
+* Lemma for mendpadm.  Multiplication is commutative.
+
+h1::mendpadm.a         |- B = ( Base ` M )
+h2::mendpadm.b         |- .o. = ( +g ` M )
+h3::mendpadm.c        |- ( ph -> B =/= (/) )
+h4::mendpadm.d        |- ( ph -> M e. Mgm )
+h5::mendpadm.e        |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadm8.1       |- ( ph -> X e. B )
+h7::mendpadm8.2       |- ( ph -> Y e. B )
+8:1,2:mgmcl           |- ( ( M e. Mgm /\ X e. B /\ Y e. B ) -> ( X .o. Y ) e. B )
+9:4,6,7,8:syl3anc    |- ( ph -> ( X .o. Y ) e. B )
+10:1,2,3,4,5,7,9:mendpadmlem8a
+                    |- ( ph -> ( Y .o. ( Y .o. ( X .o. Y ) ) ) = ( X .o. Y ) )
+11:1,2,3,4,5,6,7:mendpadmlem4
+                     |- ( ph -> ( Y .o. ( X .o. Y ) ) = X )
+12:11:oveq2d        |- ( ph -> ( Y .o. ( Y .o. ( X .o. Y ) ) ) = ( Y .o. X ) )
+qed:10,12:eqtr3d   |- ( ph -> ( X .o. Y ) = ( Y .o. X ) )
+
+$= ( co cmgm wcel mgmcl syl3anc mendpadmlem8a mendpadmlem4 oveq2d eqtr3d ) AHHG
+   HIQZIQZIQUFHGIQABCDEFHUFIJKLMNPAFRSGESHESUFESMOPEFGHIJKTUAUBAUGGHIABCDEFHGIJ
+   KLMNOPUCUDUE $.
+
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d Y x
+$d Y y
+$d Y z
+$d X x
+$d X y
+$d X z
+$d ph x
+$d ph y
+$d ph z
+$d M y
+$d M z

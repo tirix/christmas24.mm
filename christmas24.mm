@@ -363,10 +363,13 @@ $)
       TZOPONURUSURUIVHVIVGVIGVAIQZGVDIQZIQZVCTUOGVCHIQZIQZIQZVCTBCDGHGEEEUTGTZV
       FVLVCVPVBVJVEVKIUTGVAIUDUTGVDIUDUEUFVAHTZVLVOVCVQVJUOVKVNIVAHGIUGVQVDVMGI
       VAHVCIUGRUEUFVCGTZVOUQVCGVRVNUPUOIVRVMUOGIVCGHIUDRRVRUHUJUKULUMUN $.
-   $}
 
-    $( Lemma for mendpadm.  Multiplication is commutative. $)
-    mendpadmlem9 $p |- ( ph -> A. x e. B A. y e. B ( x .o. y ) = ( y .o. x ) ) $= ? $.
+    $( Lemma for mendpadm. Multiplication is commutative. $)
+    mendpadmlem9 $p |- ( ph -> ( X .o. Y ) = ( Y .o. X ) ) $=
+      ( co cmgm wcel mgmcl syl3anc mendpadmlem8a mendpadmlem4 oveq2d eqtr3d ) A
+      HHGHIQZIQZIQUFHGIQABCDEFHUFIJKLMNPAFRSGESHESUFESMOPEFGHIJKTUAUBAUGGHIABCD
+      EFHGIJKLMNOPUCUDUE $.
+   $}
 
     $( Lemma for mendpadm.  Multiplication is associative. $)
     mendpadmlem10 $p |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. z ) = ( x .o. ( y .o. z ) ) ) $= ? $.
