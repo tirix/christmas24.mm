@@ -369,10 +369,22 @@ $)
       ( co cmgm wcel mgmcl syl3anc mendpadmlem8a mendpadmlem4 oveq2d eqtr3d ) A
       HHGHIQZIQZIQUFHGIQABCDEFHUFIJKLMNPAFRSGESHESUFESMOPEFGHIJKTUAUBAUGGHIABCD
       EFHGIJKLMNOPUCUDUE $.
-   $}
 
-    $( Lemma for mendpadm.  Multiplication is associative. $)
-    mendpadmlem10 $p |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. z ) = ( x .o. ( y .o. z ) ) ) $= ? $.
+    $d Z x y z $. 
+    mendpadm10.3 $e |- ( ph -> Z e. B ) $.
+    $( Lemma for mendpadm. Multiplication is associative. $)
+    mendpadmlem10 $p |- ( ph -> ( ( X .o. Y ) .o. Z ) = ( X .o. ( Y .o. Z ) ) )
+       $=
+      ( co wcel mendpadmlem9 oveq2d cmgm syl3anc mendpadmlem8a cv wceq wral w3a
+      mgmcl oveq1 oveq12d eqeq1d oveq2 id eqeq12d rspc3v imp syl31anc 3eqtr2rd
+      ) AGHJISZISGJHISZISZGHISZVDVCISZISVDJISAVAVBGIABCDEFHJIKLMNOQRUAUBABCDEFV
+      DVCIKLMNOAFUCTZGETZHETZVDETNPQEFGHIKLUJUDAVFVGVBETZVCETNPAVFJETZVHVINRQEF
+      JHIKLUJUDEFGVBIKLUJUDUEAVEJVDIAVGVHVJBUFZCUFZISZVKDUFZVLISZISZISZVNUGZDEU
+      HCEUHBEUHZVEJUGZPQROVGVHVJUIVSVTVRVTGVLISZGVOISZISZVNUGVDGVNHISZISZISZVNU
+      GBCDGHJEEEVKGUGZVQWCVNWGVMWAVPWBIVKGVLIUKVKGVOIUKULUMVLHUGZWCWFVNWHWAVDWB
+      WEIVLHGIUNWHVOWDGIVLHVNIUNUBULUMVNJUGZWFVEVNJWIWEVCVDIWIWDVBGIVNJHIUKUBUB
+      WIUOUPUQURUSUBUT $.
+   $}
 
     $( Lemma for mendpadm. ` M ` is a group. $)
     mendpadmlem11 $p |- ( ph -> M e. Grp ) $= ? $.
