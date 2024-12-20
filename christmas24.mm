@@ -386,8 +386,21 @@ $)
       WIUOUPUQURUSUBUT $.
    $}
 
+    $d .o. a b c x y z $. $d .o. i t $. $d B a b c x y z $. $d B i t $.
+    $d M a b c x y z $. $d M i t $. $d a b c ph x y z $. $d a t $.
+    $d i ph t x y z $.
     $( Lemma for mendpadm. ` M ` is a group. $)
-    mendpadmlem11 $p |- ( ph -> M e. Grp ) $= ? $.
+    mendpadmlem11 $p |- ( ph -> M e. Grp ) $=
+      ( vt vi cv wceq wcel co wa adantr va vb c0g cfv cbs a1i cplusg cmgm mgmcl
+      syl3an1 w3a wne wral simpr1 simpr2 simpr3 mendpadmlem10 mendpadmlem7 eqid
+      vc c0 wreu wrex mendpadmlem7e reurex syl mgmlrid simpr mendpadmlem6 mpdan
+      simpld eqtrd isgrpd ) AUAUBUTEGFUAOZFUCUDZEFUEUDPAHUFGFUGUDPAIUFAFUHQZVNE
+      QZUBOZEQZVNVRGREQKEFVNVRGHIUIUJAVQVSUTOZEQZUKZSBCDEFVNVRGVTHIAEVAULZWBJTA
+      VPWBKTABOZCOZGRWDDOZWEGRGRGRWFPDEUMCEUMBEUMZWBLTAVQVSWAUNAVQVSWAUOAVQVSWA
+      UPUQABCDEFGHIJKLURZAVQSZVOVNGRVNPVNVOGRVNPAMEGNFVNVOHVOUSZIANOZMOZGRWLPWL
+      WKGRWLPSMEUMZNEVBWMNEVCABCDMENFGHIJKLVDWMNEVEVFZVGVKAVQVHZWIVNVNGRVOVOGRZ
+      VOWIBCDEFVNVOGHIAWCVQJTAVPVQKTAWGVQLTWOAVOEQZVQWHTVIAWPVOPZVQAWRWRAWQWRWR
+      SWHAMEGNFVOVOHWJIWNVGVJVKTVLVM $.
 
     $( Boolean groups (i.e. abelian groups of exponent 2), can be defined by
        one identity.  Here we use a short identity from a 1972 paper of N.S.
