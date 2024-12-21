@@ -386,24 +386,49 @@ $)
       WIUOUPUQURUSUBUT $.
    $}
 
+   ${
+    $d .o. i t x y z $. $d B i t x y z $. $d M i t x y z $. $d X t x y z $.
+    $d i ph t x y z $.
+    mendpadmlem11a.1 $e |- ( ph -> X e. B ) $.
+    $( Lemma for mendpadm. ` M ` has exponent 2. $)
+    mendpadmlem11a $p |- ( ph -> ( X .o. X ) = ( 0g ` M ) ) $=
+      ( vt vi co wceq wa cv mendpadmlem7 wcel eqid wral wreu wrex mendpadmlem7e
+      c0g cfv mendpadmlem6 reurex syl mgmlrid mpdan simpld eqtrd ) AGGHQFUHUIZU
+      QHQZUQABCDEFGUQHIJKLMNABCDEFHIJKLMUAZUJAURUQRZUTAUQEUBUTUTSUSAOEHPFUQUQIU
+      QUCJAPTZOTZHQVBRVBVAHQVBRSOEUDZPEUEVCPEUFABCDOEPFHIJKLMUGVCPEUKULUMUNUOUP
+      $.
+   $}
+
     $d .o. a b c x y z $. $d .o. i t $. $d B a b c x y z $. $d B i t $.
     $d M a b c x y z $. $d M i t $. $d a b c ph x y z $. $d a t $.
     $d i ph t x y z $.
     $( Lemma for mendpadm. ` M ` is a group. $)
     mendpadmlem11 $p |- ( ph -> M e. Grp ) $=
-      ( vt vi cv wceq wcel co wa adantr va vb c0g cfv cbs a1i cplusg cmgm mgmcl
-      syl3an1 w3a wne wral simpr1 simpr2 simpr3 mendpadmlem10 mendpadmlem7 eqid
-      vc c0 wreu wrex mendpadmlem7e reurex syl mgmlrid simpr mendpadmlem6 mpdan
-      simpld eqtrd isgrpd ) AUAUBUTEGFUAOZFUCUDZEFUEUDPAHUFGFUGUDPAIUFAFUHQZVNE
-      QZUBOZEQZVNVRGREQKEFVNVRGHIUIUJAVQVSUTOZEQZUKZSBCDEFVNVRGVTHIAEVAULZWBJTA
-      VPWBKTABOZCOZGRWDDOZWEGRGRGRWFPDEUMCEUMBEUMZWBLTAVQVSWAUNAVQVSWAUOAVQVSWA
-      UPUQABCDEFGHIJKLURZAVQSZVOVNGRVNPVNVOGRVNPAMEGNFVNVOHVOUSZIANOZMOZGRWLPWL
-      WKGRWLPSMEUMZNEVBWMNEVCABCDMENFGHIJKLVDWMNEVEVFZVGVKAVQVHZWIVNVNGRVOVOGRZ
-      VOWIBCDEFVNVOGHIAWCVQJTAVPVQKTAWGVQLTWOAVOEQZVQWHTVIAWPVOPZVQAWRWRAWQWRWR
-      SWHAMEGNFVOVOHWJIWNVGVJVKTVLVM $.
+      ( vt vi cv wceq wcel co adantr wral va vb vc c0g cfv cbs a1i cplusg mgmcl
+      cmgm syl3an1 w3a wne simpr1 simpr2 simpr3 mendpadmlem10 mendpadmlem7 eqid
+      wa wreu wrex mendpadmlem7e reurex syl mgmlrid simpld simpr mendpadmlem11a
+      c0 mendpadmlem6 eqtrd isgrpd ) AUAUBUCEGFUAOZFUDUEZEFUFUEPAHUGGFUHUEPAIUG
+      AFUJQZVNEQZUBOZEQZVNVRGREQKEFVNVRGHIUIUKAVQVSUCOZEQZULZUTBCDEFVNVRGVTHIAE
+      VJUMZWBJSAVPWBKSABOZCOZGRWDDOZWEGRGRGRWFPDETCETBETZWBLSAVQVSWAUNAVQVSWAUO
+      AVQVSWAUPUQABCDEFGHIJKLURZAVQUTZVOVNGRVNPVNVOGRVNPAMEGNFVNVOHVOUSIANOZMOZ
+      GRWKPWKWJGRWKPUTMETZNEVAWLNEVBABCDMENFGHIJKLVCWLNEVDVEVFVGAVQVHZWIVNVNGRV
+      OVOGRZVOWIBCDEFVNVOGHIAWCVQJSAVPVQKSAWGVQLSWMAVOEQVQWHSVKAWNVOPVQABCDEFVO
+      GHIJKLWHVISVLVM $.
+
+    $( Lemma for mendpadm. ` M ` is abelian. $)
+    mendpadmabl $p |- ( ph -> M e. Abel ) $=
+      ( va vb wceq cv wcel 3ad2ant1 co wral cbs cfv a1i cplusg mendpadmlem11 c0
+      w3a wne cmgm simp2 simp3 mendpadmlem9 isabld ) AMNEGFEFUAUBOAHUCGFUDUBOAI
+      UCABCDEFGHIJKLUEAMPZEQZNPZEQZUGBCDEFUNUPGHIAUOEUFUHUQJRAUOFUIQUQKRAUOBPZC
+      PZGSURDPZUSGSGSGSUTODETCETBETUQLRAUOUQUJAUOUQUKULUM $.
 
     $( Boolean groups (i.e. abelian groups of exponent 2), can be defined by
-       one identity.  Here we use a short identity from a 1972 paper of N.S.
+       one identity. Here we use a short identity from a 1972 paper of N.S.
        Mendelsohn and R. Padmanabhan. $)
-    mendpadm $p |- ( ph -> ( M e. Abel /\ A. x e. B ( x .o. x ) = ( 0g ` M ) ) ) $= ? $.
+    mendpadm $p |- ( ph -> ( M e. Abel /\ A. t e. B ( t .o. t ) = ( 0g ` M ) )
+       ) $=
+      ( cabl wcel cv co wceq wral adantr c0g cfv mendpadmabl wne mendpadmlem11a
+      wa c0 cmgm simpr ralrimiva jca ) AGNOEPZULHQGUAUBRZEFSABCDFGHIJKLMUCAUMEF
+      AULFOZUFBCDFGULHIJAFUGUDUNKTAGUHOUNLTABPZCPZHQUODPZUPHQHQHQUQRDFSCFSBFSUN
+      MTAUNUIUEUJUK $.
   $}

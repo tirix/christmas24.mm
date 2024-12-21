@@ -1,0 +1,56 @@
+$theorem mendpadmabl
+
+* Lemma for mendpadm. ` M ` is abelian.
+
+h1::mendpadm.a       |- B = ( Base ` M )
+h2::mendpadm.b       |- .o. = ( +g ` M )
+h3::mendpadm.c        |- ( ph -> B =/= (/) )
+h4::mendpadm.d        |- ( ph -> M e. Mgm )
+h5::mendpadm.e        |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+6:1:a1i             |- ( ph -> B = ( Base ` M ) )
+7:2:a1i             |- ( ph -> .o. = ( +g ` M ) )
+8:1,2,3,4,5:mendpadmlem11
+                    |- ( ph -> M e. Grp )
+9:3:3ad2ant1         |- ( ( ph /\ a e. B /\ b e. B ) -> B =/= (/) )
+10:4:3ad2ant1        |- ( ( ph /\ a e. B /\ b e. B ) -> M e. Mgm )
+11:5:3ad2ant1        |- ( ( ph /\ a e. B /\ b e. B ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+12::simp2            |- ( ( ph /\ a e. B /\ b e. B ) -> a e. B )
+13::simp3            |- ( ( ph /\ a e. B /\ b e. B ) -> b e. B )
+14:1,2,9,10,11,12,13:mendpadmlem9
+                    |- ( ( ph /\ a e. B /\ b e. B ) -> ( a .o. b ) = ( b .o. a ) )
+qed:6,7,8,14:isabld
+                   |- ( ph -> M e. Abel )
+
+$= ( va vb wceq cv wcel 3ad2ant1 co wral cbs cfv a1i mendpadmlem11 w3a wne cmgm
+   cplusg c0 simp2 simp3 mendpadmlem9 isabld ) AMNEGFEFUAUBOAHUCGFUHUBOAIUCABCD
+   EFGHIJKLUDAMPZEQZNPZEQZUEBCDEFUNUPGHIAUOEUIUFUQJRAUOFUGQUQKRAUOBPZCPZGSURDPZ
+   USGSGSGSUTODETCETBETUQLRAUOUQUJAUOUQUKULUM $.
+
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d M x
+$d M y
+$d M z
+$d ph x
+$d ph y
+$d ph z
+$d a b
+$d a ph
+$d B a
+$d B b
+$d M a
+$d M b
+$d b ph
+$d a x
+$d a y
+$d a z
+$d b x
+$d b y
+$d b z

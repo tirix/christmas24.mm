@@ -1,0 +1,46 @@
+$theorem mendpadm
+
+* Boolean groups (i.e. abelian groups of exponent 2), can be defined by
+       one identity.  Here we use a short identity from a 1972 paper of N.S.
+       Mendelsohn and R. Padmanabhan.
+
+h1::mendpadm.a        |- B = ( Base ` M )
+h2::mendpadm.b        |- .o. = ( +g ` M )
+h3::mendpadm.c         |- ( ph -> B =/= (/) )
+h4::mendpadm.d         |- ( ph -> M e. Mgm )
+h5::mendpadm.e         |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+6:1,2,3,4,5:mendpadmabl
+                    |- ( ph -> M e. Abel )
+7:3:adantr            |- ( ( ph /\ t e. B ) -> B =/= (/) )
+8:4:adantr            |- ( ( ph /\ t e. B ) -> M e. Mgm )
+9:5:adantr            |- ( ( ph /\ t e. B ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+10::simpr             |- ( ( ph /\ t e. B ) -> t e. B )
+11:1,2,7,8,9,10:mendpadmlem11a
+                     |- ( ( ph /\ t e. B ) -> ( t .o. t ) = ( 0g ` M ) )
+12:11:ralrimiva     |- ( ph -> A. t e. B ( t .o. t ) = ( 0g ` M ) )
+qed:6,12:jca       |- ( ph -> ( M e. Abel /\ A. t e. B ( t .o. t ) = ( 0g ` M ) ) )
+
+$= ( cabl wcel cv co wceq wral adantr c0g cfv mendpadmabl wa wne mendpadmlem11a
+   c0 cmgm simpr ralrimiva jca ) AGNOEPZULHQGUAUBRZEFSABCDFGHIJKLMUCAUMEFAULFOZ
+   UDBCDFGULHIJAFUGUEUNKTAGUHOUNLTABPZCPZHQUODPZUPHQHQHQUQRDFSCFSBFSUNMTAUNUIUF
+   UJUK $.
+
+$d ph t
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d M x
+$d M y
+$d M z
+$d t x
+$d t y
+$d t z
+$d ph x
+$d ph y
+$d ph z

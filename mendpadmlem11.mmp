@@ -2,11 +2,11 @@ $theorem mendpadmlem11
 
 * Lemma for mendpadm. ` M ` is a group.
 
-h1::mendpadm.a             |- B = ( Base ` M )
-h2::mendpadm.b             |- .o. = ( +g ` M )
-h3::mendpadm.c             |- ( ph -> B =/= (/) )
-h4::mendpadm.d             |- ( ph -> M e. Mgm )
-h5::mendpadm.e             |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h1::mendpadm.a          |- B = ( Base ` M )
+h2::mendpadm.b          |- .o. = ( +g ` M )
+h3::mendpadm.c          |- ( ph -> B =/= (/) )
+h4::mendpadm.d          |- ( ph -> M e. Mgm )
+h5::mendpadm.e          |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
 6:1:a1i             |- ( ph -> B = ( Base ` M ) )
 7:2:a1i             |- ( ph -> .o. = ( +g ` M ) )
 8:1,2:mgmcl          |- ( ( M e. Mgm /\ a e. B /\ b e. B ) -> ( a .o. b ) e. B )
@@ -20,12 +20,12 @@ h5::mendpadm.e             |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y 
 16:1,2,13,14,15,10,11,12:mendpadmlem10
                     |- ( ( ph /\ ( a e. B /\ b e. B /\ c e. B ) ) -> ( ( a .o. b ) .o. c ) = ( a .o. ( b .o. c ) ) )
 17:1,2,3,4,5:mendpadmlem7
-                        |- ( ph -> ( 0g ` M ) e. B )
-18::eqid                 |- ( 0g ` M ) = ( 0g ` M )
+                       |- ( ph -> ( 0g ` M ) e. B )
+18::eqid              |- ( 0g ` M ) = ( 0g ` M )
 19:1,2,3,4,5:mendpadmlem7e
-                          |- ( ph -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
-20::reurex                |- ( E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> E. i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
-21:19,20:syl             |- ( ph -> E. i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+                       |- ( ph -> E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+20::reurex             |- ( E! i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) -> E. i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
+21:19,20:syl          |- ( ph -> E. i e. B A. t e. B ( ( i .o. t ) = t /\ ( t .o. i ) = t ) )
 22:1,18,2,21:mgmlrid
                      |- ( ( ph /\ a e. B ) -> ( ( ( 0g ` M ) .o. a ) = a /\ ( a .o. ( 0g ` M ) ) = a ) )
 23:22:simpld        |- ( ( ph /\ a e. B ) -> ( ( 0g ` M ) .o. a ) = a )
@@ -37,24 +37,24 @@ h5::mendpadm.e             |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y 
 29:1,2,26,27,28,24,25:mendpadmlem6
                      |- ( ( ph /\ a e. B ) -> ( a .o. a ) = ( ( 0g ` M ) .o. ( 0g ` M ) ) )
 30:1,18,2,21:mgmlrid
-                        |- ( ( ph /\ ( 0g ` M ) e. B ) -> ( ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) /\ ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) ) )
-31:17,30:mpdan         |- ( ph -> ( ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) /\ ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) ) )
-32:31:simpld          |- ( ph -> ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) )
+                    |- ( ( ph /\ ( 0g ` M ) e. B ) -> ( ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) /\ ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) ) )
+31:17,30:mpdan     |- ( ph -> ( ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) /\ ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) ) )
+32:1,2,3,4,5,17:mendpadmlem11a
+                      |- ( ph -> ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) )
 33:32:adantr         |- ( ( ph /\ a e. B ) -> ( ( 0g ` M ) .o. ( 0g ` M ) ) = ( 0g ` M ) )
 34:29,33:eqtrd      |- ( ( ph /\ a e. B ) -> ( a .o. a ) = ( 0g ` M ) )
 qed:6,7,9,16,17,23,24,34:isgrpd
                    |- ( ph -> M e. Grp )
 
-$= ( vt vi cv wceq wcel co wa adantr va vb vc c0g cfv cbs a1i cplusg cmgm mgmcl
-   syl3an1 w3a c0 wne wral simpr1 simpr2 simpr3 mendpadmlem10 mendpadmlem7 eqid
-   wreu wrex mendpadmlem7e reurex mgmlrid simpld simpr mendpadmlem6 mpdan eqtrd
-   syl isgrpd ) AUAUBUCEGFUAOZFUDUEZEFUFUEPAHUGGFUHUEPAIUGAFUIQZVNEQZUBOZEQZVNV
-   RGREQKEFVNVRGHIUJUKAVQVSUCOZEQZULZSBCDEFVNVRGVTHIAEUMUNZWBJTAVPWBKTABOZCOZGR
-   WDDOZWEGRGRGRWFPDEUOCEUOBEUOZWBLTAVQVSWAUPAVQVSWAUQAVQVSWAURUSABCDEFGHIJKLUT
-   ZAVQSZVOVNGRVNPVNVOGRVNPAMEGNFVNVOHVOVAZIANOZMOZGRWLPWLWKGRWLPSMEUOZNEVBWMNE
-   VCABCDMENFGHIJKLVDWMNEVEVLZVFVGAVQVHZWIVNVNGRVOVOGRZVOWIBCDEFVNVOGHIAWCVQJTA
-   VPVQKTAWGVQLTWOAVOEQZVQWHTVIAWPVOPZVQAWRWRAWQWRWRSWHAMEGNFVOVOHWJIWNVFVJVGTV
-   KVM $.
+$= ( vt vi cv wceq wcel co adantr wral va vb vc c0g cfv cbs cplusg cmgm syl3an1
+   a1i mgmcl w3a wa c0 wne simpr1 simpr2 simpr3 mendpadmlem10 mendpadmlem7 eqid
+   wreu wrex mendpadmlem7e reurex syl mgmlrid simpr mendpadmlem6 mendpadmlem11a
+   simpld eqtrd isgrpd ) AUAUBUCEGFUAOZFUDUEZEFUFUEPAHUJGFUGUEPAIUJAFUHQZVNEQZU
+   BOZEQZVNVRGREQKEFVNVRGHIUKUIAVQVSUCOZEQZULZUMBCDEFVNVRGVTHIAEUNUOZWBJSAVPWBK
+   SABOZCOZGRWDDOZWEGRGRGRWFPDETCETBETZWBLSAVQVSWAUPAVQVSWAUQAVQVSWAURUSABCDEFG
+   HIJKLUTZAVQUMZVOVNGRVNPVNVOGRVNPAMEGNFVNVOHVOVAIANOZMOZGRWKPWKWJGRWKPUMMETZN
+   EVBWLNEVCABCDMENFGHIJKLVDWLNEVEVFVGVKAVQVHZWIVNVNGRVOVOGRZVOWIBCDEFVNVOGHIAW
+   CVQJSAVPVQKSAWGVQLSWMAVOEQVQWHSVIAWNVOPVQABCDEFVOGHIJKLWHVJSVLVM $.
 
 $d a b
 $d a c
