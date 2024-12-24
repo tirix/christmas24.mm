@@ -1,0 +1,50 @@
+$theorem mendpadmbilem5
+
+* Lemma for mendpadmbi. In a group of exponent dividing 2 we have ` X .o. X .o. Y = Y ` for all ` X ` and ` Y ` .
+
+h1::mendpadmbi.a          |- B = ( Base ` M )
+h2::mendpadmbi.b        |- .o. = ( +g ` M )
+h3::mendpadmbilem5.1
+                         |- ( ph -> M e. Abel )
+h4::mendpadmbilem5.2
+                        |- ( ph -> ( gEx ` M ) || 2 )
+h5::mendpadmbilem5.3
+                       |- ( ph -> X e. B )
+h6::mendpadmbilem5.4
+                     |- ( ph -> Y e. B )
+7::eqid                   |- ( gEx ` M ) = ( gEx ` M )
+8::eqid                   |- ( .g ` M ) = ( .g ` M )
+9::eqid                   |- ( 0g ` M ) = ( 0g ` M )
+10:1,7,8,9:gexdvds       |- ( ( M e. Grp /\ 2 e. ZZ ) -> ( ( gEx ` M ) || 2 <-> A. t e. B ( 2 ( .g ` M ) t ) = ( 0g ` M ) ) )
+11:10:biimpa            |- ( ( ( M e. Grp /\ 2 e. ZZ ) /\ ( gEx ` M ) || 2 ) -> A. t e. B ( 2 ( .g ` M ) t ) = ( 0g ` M ) )
+12:3:ablgrpd            |- ( ph -> M e. Grp )
+13::2z                   |- 2 e. ZZ
+14:13:a1i               |- ( ph -> 2 e. ZZ )
+15:12,14,4,11:syl21anc
+                       |- ( ph -> A. t e. B ( 2 ( .g ` M ) t ) = ( 0g ` M ) )
+16::oveq2               |- ( t = X -> ( 2 ( .g ` M ) t ) = ( 2 ( .g ` M ) X ) )
+17:16:eqeq1d           |- ( t = X -> ( ( 2 ( .g ` M ) t ) = ( 0g ` M ) <-> ( 2 ( .g ` M ) X ) = ( 0g ` M ) ) )
+18:17,15,5:rspcdva    |- ( ph -> ( 2 ( .g ` M ) X ) = ( 0g ` M ) )
+19:1,8,2:mulg2         |- ( X e. B -> ( 2 ( .g ` M ) X ) = ( X .o. X ) )
+20:5,19:syl           |- ( ph -> ( 2 ( .g ` M ) X ) = ( X .o. X ) )
+21:20,18:eqtr3d      |- ( ph -> ( X .o. X ) = ( 0g ` M ) )
+22:1,2:grpass        |- ( ( M e. Grp /\ ( X e. B /\ X e. B /\ Y e. B ) ) -> ( ( X .o. X ) .o. Y ) = ( X .o. ( X .o. Y ) ) )
+23:12,5,5,6,22:syl13anc
+                    |- ( ph -> ( ( X .o. X ) .o. Y ) = ( X .o. ( X .o. Y ) ) )
+24:21:oveq1d        |- ( ph -> ( ( X .o. X ) .o. Y ) = ( ( 0g ` M ) .o. Y ) )
+25:1,2,9:grplid      |- ( ( M e. Grp /\ Y e. B ) -> ( ( 0g ` M ) .o. Y ) = Y )
+26:12,6,25:syl2anc  |- ( ph -> ( ( 0g ` M ) .o. Y ) = Y )
+qed:24,23,26:3eqtr3d
+                   |- ( ph -> ( X .o. ( X .o. Y ) ) = Y )
+
+$= ( vt co c0g cfv c2 wcel wceq eqid cmg mulg2 syl cv oveq2 eqeq1d cgrp cz cgex
+   cdvds wbr wral ablgrpd 2z a1i wa gexdvds biimpa rspcdva eqtr3d oveq1d grpass
+   syl21anc syl13anc grplid syl2anc 3eqtr3d ) ADDFNZEFNZCOPZEFNZDDEFNFNZEAVHVJE
+   FAQDCUAPZNZVHVJADBRZVNVHSKBFVMCDGVMTZHUBUCAQMUDZVMNZVJSZVNVJSMBDVQDSVRVNVJVQ
+   DQVMUEUFACUGRZQUHRZCUIPZQUJUKZVSMBULZACIUMZWAAUNUOJVTWAUPWCWDMVMWBCQBVJGWBTV
+   PVJTZUQURVCKUSUTVAAVTVOVOEBRZVIVLSWEKKLBFCDDEGHVBVDAVTWGVKESWELBFCEVJGHWFVEV
+   FVG $.
+
+$d M t
+$d B t
+$d X t

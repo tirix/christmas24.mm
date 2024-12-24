@@ -306,7 +306,7 @@ $)
       LWCVIWGIULUMUNWDHRZWRXAWFXCWPVJWQWTIWDHVIIUOXCWGWSVIIWDHWFIUOTUMUNWFVMRZX
       AVSWFVMXDWTVRVJIXDWSVQVIIWFVMHIULTTXDUPUQURUSUTVPVRGGIVPVRVJGVPVQHVIIVPBC
       DEFHIJKAEVAVBVNVKLSAWNVNVKMSWOWMVDTVTVETVFABCDUAEFHGIJKLMNOPVGVH $.
-  $}
+   $}
 
     $d .o. i t u x y z $. $d B i t u x y z $. $d M i t u $. $d X x y z $.
     $d Y x y z $. $d i ph t u x y z $.
@@ -431,4 +431,79 @@ $)
       wa c0 cmgm simpr ralrimiva jca ) AGNOEPZULHQGUAUBRZEFSABCDFGHIJKLMUCAUMEF
       AULFOZUFBCDFGULHIJAFUGUDUNKTAGUHOUNLTABPZCPZHQUODPZUPHQHQHQUQRDFSCFSBFSUN
       MTAUNUIUEUJUK $.
+
+   $( Bonus problems! $)
+
+   ${
+    mendpadmbilem1.e $e |- E = ( 0g ` M ) $.
+    mendpadmbilem1.m $e |- .x. = ( .g ` M ) $.
+    $( Lemma for mendpadmbi. Mendelsohn-Padmanabhan identity implies that ` X `
+       to the power of ` 2 ` is the group identity for all ` X ` . $)
+    mendpadmbilem2 $p |- ( ( ph /\ X e. B ) -> ( 2 .x. X ) = E ) $=
+      ( co adantr cv wcel wa c2 wceq simpr mulg2 syl c0g cfv wne mendpadmlem11a
+      c0 cmgm wral eqtr4di eqtrd ) AIEUAZUBZUCIFRZIIJRZGURUQUSUTUDAUQUEZEJFHIKQ
+      LUFUGURUTHUHUIGURBCDEHIJKLAEULUJUQMSAHUMUAUQNSABTZCTZJRVBDTZVCJRJRJRVDUDD
+      EUNCEUNBEUNUQOSVAUKPUOUP $.
+   $}
+
+    $( Lemma for mendpadmbi. Mendelsohn-Padmanabhan identity implies that the
+       group exponent is at most 2. $)
+    mendpadmbilem3 $p |- ( ph -> ( gEx ` M ) e. ( 1 ... 2 ) ) $=
+      ( vt cmgm wcel c2 cn cfv co eqid cv cmg c0g wceq wral cgex c1 cfz 2nn a1i
+      mendpadmbilem2 ralrimiva gexlem2 syl3anc ) AFNOPQOZPMUAZFUBRZSFUCRZUDZMEU
+      EFUFRZUGPUHSOKUOAUIUJAUSMEABCDEUQURFUPGHIJKLURTZUQTZUKULMUQUTFPNEURHUTTVB
+      VAUMUN $.
+
+    $( Mendelsohn-Padmanabhan identity implies that the group exponent divides
+       2. $)
+    mendpadmbilem4 $p |- ( ph -> ( gEx ` M ) || 2 ) $=
+      ( vt cgrp wcel c2 cz cv cfv eqid cmg co c0g wceq wral cdvds mendpadmlem11
+      cgex wbr 2z a1i mendpadmbilem2 ralrimiva wa gexdvds biimpar syl21anc ) AF
+      NOZPQOZPMRZFUASZUBFUCSZUDZMEUEZFUHSZPUFUIZABCDEFGHIJKLUGUSAUJUKAVCMEABCDE
+      VAVBFUTGHIJKLVBTZVATZULUMURUSUNVFVDMVAVEFPEVBHVETVHVGUOUPUQ $.
+  $}
+
+  ${
+    $d B t $. $d M t $. $d X t $.
+    mendpadmbilem5.a $e |- B = ( Base ` M ) $.
+    mendpadmbilem5.b $e |- .o. = ( +g ` M ) $.
+    mendpadmbilem5.1 $e |- ( ph -> M e. Abel ) $.
+    mendpadmbilem5.2 $e |- ( ph -> ( gEx ` M ) || 2 ) $.
+    mendpadmbilem5.3 $e |- ( ph -> X e. B ) $.
+    mendpadmbilem5.4 $e |- ( ph -> Y e. B ) $.
+    $( Lemma for mendpadmbi. In a group of exponent dividing 2 we have ` X .o.
+       X .o. Y = Y ` for all ` X ` and ` Y ` . $)
+    mendpadmbilem5 $p |- ( ph -> ( X .o. ( X .o. Y ) ) = Y ) $=
+      ( vt co c0g cfv c2 wcel wceq eqid cmg mulg2 syl cv oveq2 eqeq1d cgrp cgex
+      cz cdvds wbr wral ablgrpd 2z a1i wa gexdvds biimpa syl21anc eqtr3d oveq1d
+      rspcdva grpass syl13anc grplid syl2anc 3eqtr3d ) ADDFNZEFNZCOPZEFNZDDEFNF
+      NZEAVHVJEFAQDCUAPZNZVHVJADBRZVNVHSKBFVMCDGVMTZHUBUCAQMUDZVMNZVJSZVNVJSMBD
+      VQDSVRVNVJVQDQVMUEUFACUGRZQUIRZCUHPZQUJUKZVSMBULZACIUMZWAAUNUOJVTWAUPWCWD
+      MVMWBCQBVJGWBTVPVJTZUQURUSKVBUTVAAVTVOVOEBRZVIVLSWEKKLBFCDDEGHVCVDAVTWGVK
+      ESWELBFCEVJGHWFVEVFVG $.
+  $}
+
+  ${
+    $d .o. a b c x y z $. $d B a b c x y z $. $d M a b c x y z $.
+    mendpadmbi.a $e |- B = ( Base ` M ) $.
+    mendpadmbi.b $e |- .o. = ( +g ` M ) $.
+    mendpadmbi.c $e |- B =/= (/) $.
+    mendpadmbi.d $e |- M e. Mgm $.
+    $( Boolean groups are characterized by an identiy of N.S. Mendelsohn and R.
+       Padmanabhan. $)
+    mendpadmbi $p |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o.
+       ( z .o. y ) ) ) = z <-> ( M e. Abel /\ ( gEx ` M ) || 2 ) ) $=
+      ( va vb vc cv co wceq wral wcel oveq1 oveq2d cabl cgex cfv c2 cdvds wa c0
+      wbr wne cmgm oveq12d eqeq1d oveq2 id eqeq12d cbvral3vw biimpi mendpadmabl
+      a1i mendpadmbilem4 jca simpll simpr3 simpr2 ablcom syl3anc ablgrpd simpr1
+      w3a grpass syl13anc eqtr4d simplr grpcld mendpadmbilem5 eqtrd ralrimivvva
+      cgrp impbii ) ANZBNZFOZVTCNZWAFOZFOZFOZWCPZCDQBDQADQZEUARZEUBUCUDUEUHZUFZ
+      WHWIWJWHKLMDEFGHDUGUIWHIUSZEUJRWHJUSZWHKNZLNZFOZWNMNZWOFOZFOZFOZWQPZMDQLD
+      QKDQWGXAWNWAFOZWNWDFOZFOZWCPWPWNWCWOFOZFOZFOZWCPABCKLMDDDVTWNPZWFXDWCXHWB
+      XBWEXCFVTWNWAFSVTWNWDFSUKULWAWOPZXDXGWCXIXBWPXCXFFWAWOWNFUMXIWDXEWNFWAWOW
+      CFUMTUKULWCWQPZXGWTWCWQXJXFWSWPFXJXEWRWNFWCWQWOFSTTXJUNUOUPUQZURWHKLMDEFG
+      HWLWMXKUTVAWKWGABCDDDWKVTDRZWADRZWCDRZVIZUFZWFWBWBWCFOZFOWCXPWEXQWBFXPWEV
+      TWAWCFOZFOZXQXPWDXRVTFXPWIXNXMWDXRPWIWJXOVBZWKXLXMXNVCZWKXLXMXNVDZDFEWCWA
+      GHVEVFTXPEVRRXLXMXNXQXSPXPEXTVGZWKXLXMXNVHZYBYADFEVTWAWCGHVJVKVLTXPDEWBWC
+      FGHXTWIWJXOVMXPDFEVTWAGHYCYDYBVNYAVOVPVQVS $.
   $}

@@ -1,0 +1,48 @@
+$theorem mendpadmbilem2
+
+* Lemma for mendpadmbi.  Mendelsohn-Padmanabhan identity implies that the group exponent is at most 2.
+
+h1::mendpadmbi.a      |- B = ( Base ` M )
+h2::mendpadmbi.b      |- .o. = ( +g ` M )
+h3::mendpadmbi.c       |- ( ph -> B =/= (/) )
+h4::mendpadmbi.d       |- ( ph -> M e. Mgm )
+h5::mendpadmbilem1.1
+                       |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+h6::mendpadmbilem1.e
+                     |- E = ( 0g ` M )
+h7::mendpadmbilem1.m
+                      |- .x. = ( .g ` M )
+8::simpr              |- ( ( ph /\ X e. B ) -> X e. B )
+9:1,7,2:mulg2        |- ( X e. B -> ( 2 .x. X ) = ( X .o. X ) )
+10:8,9:syl          |- ( ( ph /\ X e. B ) -> ( 2 .x. X ) = ( X .o. X ) )
+11:3:adantr           |- ( ( ph /\ X e. B ) -> B =/= (/) )
+12:4:adantr           |- ( ( ph /\ X e. B ) -> M e. Mgm )
+13:5:adantr           |- ( ( ph /\ X e. B ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+14:1,2,11,12,13,8:mendpadmlem11a
+                     |- ( ( ph /\ X e. B ) -> ( X .o. X ) = ( 0g ` M ) )
+15:14,6:eqtr4di     |- ( ( ph /\ X e. B ) -> ( X .o. X ) = E )
+qed:10,15:eqtrd    |- ( ( ph /\ X e. B ) -> ( 2 .x. X ) = E )
+
+$= ( co adantr cv wcel wa c2 wceq simpr mulg2 syl c0g cfv c0 wne mendpadmlem11a
+   cmgm wral eqtr4di eqtrd ) AIEUAZUBZUCIFRZIIJRZGURUQUSUTUDAUQUEZEJFHIKQLUFUGU
+   RUTHUHUIGURBCDEHIJKLAEUJUKUQMSAHUMUAUQNSABTZCTZJRVBDTZVCJRJRJRVDUDDEUNCEUNBE
+   UNUQOSVAULPUOUP $.
+
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d M x
+$d M y
+$d M z
+$d X x
+$d X y
+$d X z
+$d ph x
+$d ph y
+$d ph z

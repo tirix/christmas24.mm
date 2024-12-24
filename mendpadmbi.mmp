@@ -1,0 +1,102 @@
+$theorem mendpadmbi
+
+* Boolean groups are characterized by an identiy of N.S. Mendelsohn and R. Padmanabhan.
+
+h1::mendpadmbi.a           |- B = ( Base ` M )
+h2::mendpadmbi.b           |- .o. = ( +g ` M )
+h3::mendpadmbi.c       |- B =/= (/)
+h4::mendpadmbi.d       |- M e. Mgm
+5:3:a1i               |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> B =/= (/) )
+6:4:a1i               |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> M e. Mgm )
+7::oveq1                  |- ( x = a -> ( x .o. y ) = ( a .o. y ) )
+8::oveq1                  |- ( x = a -> ( x .o. ( z .o. y ) ) = ( a .o. ( z .o. y ) ) )
+9:7,8:oveq12d            |- ( x = a -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( a .o. y ) .o. ( a .o. ( z .o. y ) ) ) )
+10:9:eqeq1d             |- ( x = a -> ( ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( ( a .o. y ) .o. ( a .o. ( z .o. y ) ) ) = z ) )
+11::oveq2                 |- ( y = b -> ( a .o. y ) = ( a .o. b ) )
+12::oveq2                  |- ( y = b -> ( z .o. y ) = ( z .o. b ) )
+13:12:oveq2d              |- ( y = b -> ( a .o. ( z .o. y ) ) = ( a .o. ( z .o. b ) ) )
+14:11,13:oveq12d         |- ( y = b -> ( ( a .o. y ) .o. ( a .o. ( z .o. y ) ) ) = ( ( a .o. b ) .o. ( a .o. ( z .o. b ) ) ) )
+15:14:eqeq1d            |- ( y = b -> ( ( ( a .o. y ) .o. ( a .o. ( z .o. y ) ) ) = z <-> ( ( a .o. b ) .o. ( a .o. ( z .o. b ) ) ) = z ) )
+16::oveq1                  |- ( z = c -> ( z .o. b ) = ( c .o. b ) )
+17:16:oveq2d              |- ( z = c -> ( a .o. ( z .o. b ) ) = ( a .o. ( c .o. b ) ) )
+18:17:oveq2d             |- ( z = c -> ( ( a .o. b ) .o. ( a .o. ( z .o. b ) ) ) = ( ( a .o. b ) .o. ( a .o. ( c .o. b ) ) ) )
+19::id                   |- ( z = c -> z = c )
+20:18,19:eqeq12d        |- ( z = c -> ( ( ( a .o. b ) .o. ( a .o. ( z .o. b ) ) ) = z <-> ( ( a .o. b ) .o. ( a .o. ( c .o. b ) ) ) = c ) )
+21:10,15,20:cbvral3vw
+                       |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. ( a .o. ( c .o. b ) ) ) = c )
+22:21:biimpi          |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> A. a e. B A. b e. B A. c e. B ( ( a .o. b ) .o. ( a .o. ( c .o. b ) ) ) = c )
+23:1,2,5,6,22:mendpadmabl
+                     |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> M e. Abel )
+24:1,2,5,6,22:mendpadmbilem4
+                     |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> ( gEx ` M ) || 2 )
+25:23,24:jca        |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z -> ( M e. Abel /\ ( gEx ` M ) || 2 ) )
+26:1,2:ablcom             |- ( ( M e. Abel /\ z e. B /\ y e. B ) -> ( z .o. y ) = ( y .o. z ) )
+27::simpll                |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> M e. Abel )
+28::simpr3                |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> z e. B )
+29::simpr2                |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> y e. B )
+30:27,28,29,26:syl3anc
+                         |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( z .o. y ) = ( y .o. z ) )
+31:30:oveq2d            |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( x .o. ( z .o. y ) ) = ( x .o. ( y .o. z ) ) )
+32:1,2:grpass            |- ( ( M e. Grp /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( ( x .o. y ) .o. z ) = ( x .o. ( y .o. z ) ) )
+33:27:ablgrpd            |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> M e. Grp )
+34::simpr1               |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> x e. B )
+35:33,34,29,28,32:syl13anc
+                        |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( ( x .o. y ) .o. z ) = ( x .o. ( y .o. z ) ) )
+36:31,35:eqtr4d        |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( x .o. ( z .o. y ) ) = ( ( x .o. y ) .o. z ) )
+37:36:oveq2d          |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = ( ( x .o. y ) .o. ( ( x .o. y ) .o. z ) ) )
+38::simplr             |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( gEx ` M ) || 2 )
+39:1,2,33,34,29:grpcld
+                       |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( x .o. y ) e. B )
+40:1,2,27,38,39,28:mendpadmbilem5
+                      |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( ( x .o. y ) .o. ( ( x .o. y ) .o. z ) ) = z )
+41:37,40:eqtrd       |- ( ( ( M e. Abel /\ ( gEx ` M ) || 2 ) /\ ( x e. B /\ y e. B /\ z e. B ) ) -> ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+42:41:ralrimivvva   |- ( ( M e. Abel /\ ( gEx ` M ) || 2 ) -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+qed:25,42:impbii   |- ( A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z <-> ( M e. Abel /\ ( gEx ` M ) || 2 ) )
+
+$= ( va vb vc cv co wceq wral wcel oveq1 oveq2d cabl cfv c2 cdvds wbr wa c0 wne
+   cgex a1i cmgm oveq12d eqeq1d id eqeq12d cbvral3vw mendpadmabl mendpadmbilem4
+   oveq2 biimpi jca w3a simpll simpr3 simpr2 ablcom syl3anc cgrp ablgrpd simpr1
+   grpass syl13anc eqtr4d simplr grpcld mendpadmbilem5 eqtrd ralrimivvva impbii
+   ) ANZBNZFOZVTCNZWAFOZFOZFOZWCPZCDQBDQADQZEUARZEUIUBUCUDUEZUFZWHWIWJWHKLMDEFG
+   HDUGUHWHIUJZEUKRWHJUJZWHKNZLNZFOZWNMNZWOFOZFOZFOZWQPZMDQLDQKDQWGXAWNWAFOZWNW
+   DFOZFOZWCPWPWNWCWOFOZFOZFOZWCPABCKLMDDDVTWNPZWFXDWCXHWBXBWEXCFVTWNWAFSVTWNWD
+   FSULUMWAWOPZXDXGWCXIXBWPXCXFFWAWOWNFUSXIWDXEWNFWAWOWCFUSTULUMWCWQPZXGWTWCWQX
+   JXFWSWPFXJXEWRWNFWCWQWOFSTTXJUNUOUPUTZUQWHKLMDEFGHWLWMXKURVAWKWGABCDDDWKVTDR
+   ZWADRZWCDRZVBZUFZWFWBWBWCFOZFOWCXPWEXQWBFXPWEVTWAWCFOZFOZXQXPWDXRVTFXPWIXNXM
+   WDXRPWIWJXOVCZWKXLXMXNVDZWKXLXMXNVEZDFEWCWAGHVFVGTXPEVHRXLXMXNXQXSPXPEXTVIZW
+   KXLXMXNVJZYBYADFEVTWAWCGHVKVLVMTXPDEWBWCFGHXTWIWJXOVNXPDFEVTWAGHYCYDYBVOYAVP
+   VQVRVS $.
+
+$d .o. a
+$d .o. b
+$d .o. c
+$d a b
+$d a c
+$d a x
+$d a y
+$d a z
+$d b c
+$d b x
+$d b y
+$d b z
+$d B a
+$d B b
+$d B c
+$d M a
+$d M b
+$d M c
+$d c x
+$d c y
+$d c z
+$d .o. z
+$d B x
+$d B y
+$d B z
+$d x y
+$d x z
+$d y z
+$d .o. x
+$d .o. y
+$d M x
+$d M y
+$d M z

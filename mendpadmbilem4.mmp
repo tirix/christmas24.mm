@@ -1,0 +1,51 @@
+$theorem mendpadmbilem4
+
+* Mendelsohn-Padmanabhan identity implies that the group exponent divides 2.
+
+h1::mendpadmbi.a      |- B = ( Base ` M )
+h2::mendpadmbi.b      |- .o. = ( +g ` M )
+h3::mendpadmbi.c      |- ( ph -> B =/= (/) )
+h4::mendpadmbi.d      |- ( ph -> M e. Mgm )
+h5::mendpadmbilem1.1
+                      |- ( ph -> A. x e. B A. y e. B A. z e. B ( ( x .o. y ) .o. ( x .o. ( z .o. y ) ) ) = z )
+6::eqid               |- ( gEx ` M ) = ( gEx ` M )
+7::eqid               |- ( .g ` M ) = ( .g ` M )
+8::eqid               |- ( 0g ` M ) = ( 0g ` M )
+9:1,6,7,8:gexdvds    |- ( ( M e. Grp /\ 2 e. ZZ ) -> ( ( gEx ` M ) || 2 <-> A. t e. B ( 2 ( .g ` M ) t ) = ( 0g ` M ) ) )
+10:9:biimpar        |- ( ( ( M e. Grp /\ 2 e. ZZ ) /\ A. t e. B ( 2 ( .g ` M ) t ) = ( 0g ` M ) ) -> ( gEx ` M ) || 2 )
+11:1,2,3,4,5:mendpadmlem11
+                    |- ( ph -> M e. Grp )
+12::2z               |- 2 e. ZZ
+13:12:a1i           |- ( ph -> 2 e. ZZ )
+14:1,2,3,4,5,8,7:mendpadmbilem2
+                     |- ( ( ph /\ t e. B ) -> ( 2 ( .g ` M ) t ) = ( 0g ` M ) )
+15:14:ralrimiva     |- ( ph -> A. t e. B ( 2 ( .g ` M ) t ) = ( 0g ` M ) )
+qed:11,13,15,10:syl21anc
+                   |- ( ph -> ( gEx ` M ) || 2 )
+
+$= ( vt cgrp wcel c2 cz cv cfv eqid cmg co c0g wceq wral cgex wbr mendpadmlem11
+   cdvds 2z a1i mendpadmbilem2 ralrimiva wa gexdvds biimpar syl21anc ) AFNOZPQO
+   ZPMRZFUASZUBFUCSZUDZMEUEZFUFSZPUIUGZABCDEFGHIJKLUHUSAUJUKAVCMEABCDEVAVBFUTGH
+   IJKLVBTZVATZULUMURUSUNVFVDMVAVEFPEVBHVETVHVGUOUPUQ $.
+
+$d M t
+$d B t
+$d .o. x
+$d .o. y
+$d .o. z
+$d x y
+$d x z
+$d y z
+$d B x
+$d B y
+$d B z
+$d M x
+$d M y
+$d M z
+$d ph x
+$d ph y
+$d ph z
+$d t x
+$d t y
+$d t z
+$d ph t
